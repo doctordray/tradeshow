@@ -1,1 +1,37 @@
-<h1>Welcome to the Rails Installer Demo!!!</h1>
+<%= image_tag "tradeshow-map.png", :name=>"tradeshowmap", :id=>"tradeshowmap", :usemap=>"#m_tradeshowmap" %>
+<map name="m_tradeshowmap" id="m_tradeshowmap">
+	<area shape="rect" coords="22,710,662,1451" href="javascript:sw_click();" alt="" />
+	<area shape="rect" coords="22,19,651,710" href="javascript:nw_click();" alt="" />
+	<area shape="rect" coords="662,567,1200,1255" href="javascript:se_click();" alt="" />
+	<area shape="rect" coords="652,19,1199,520" href="javascript:ne_click();" alt="" />
+</map>
+
+
+<div id="inline">Show content in a lightbox</div>
+
+<div class="inline-content">
+	<div class="inline" id="myForm">This content should be sitting in a lightbox</div>
+	<div class="inline" id="ne_map">
+		<%= image_tag "tradeshow-map-NE.png", :name=>"tradeshowmapNE", :id=>"tradeshowmapNE", :usemap=>"#m_tradeshowmapNE" %>
+		<map name="m_tradeshowmapNE" id="m_tradeshowmapNE">
+			<area shape="poly" coords="339,45,251,45,250,90,339,91,339,45" href="javascript:;" title="D44" alt="D44" />
+			<area shape="poly" coords="159,46,159,89,248,89,249,45,159,46" href="javascript:;" title="D43" alt="D43" />
+			<area shape="poly" coords="45,46,48,136,112,136,112,91,157,91,157,48,45,46" href="javascript:;" title="D42" alt="D42" />
+		</map>
+	</div>
+</div>	
+
+<script>
+	
+	function ne_click() {
+		$.colorbox({inline:true, href:"#ne_map"});
+	}
+
+	function sw_click() {
+		$.colorbox({inline:true, href:"#sw_map"});
+	}
+
+	$('#tradeshowmap').maphilight();
+	$('#tradeshowmapNE').maphilight();
+</script>
+
