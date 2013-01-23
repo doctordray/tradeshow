@@ -11,14 +11,37 @@
 
 <div class="inline-content">
 	<div class="inline" id="myForm">This content should be sitting in a lightbox</div>
+	
 	<div class="inline" id="ne_map">
 		<%= image_tag "tradeshow-map-NE.png", :name=>"tradeshowmapNE", :id=>"tradeshowmapNE", :usemap=>"#m_tradeshowmapNE" %>
 		<map name="m_tradeshowmapNE" id="m_tradeshowmapNE">
-			<area shape="poly" coords="339,45,251,45,250,90,339,91,339,45" href="javascript:;" title="D44" alt="D44" />
-			<area shape="poly" coords="159,46,159,89,248,89,249,45,159,46" href="javascript:;" title="D43" alt="D43" />
-			<area shape="poly" coords="45,46,48,136,112,136,112,91,157,91,157,48,45,46" href="javascript:;" title="D42" alt="D42" />
+			<area shape="poly" coords="339,45,251,45,250,90,339,91,339,45" href="javascript:d44_click();" title="D44" alt="D44" />
+			<area shape="poly" coords="159,46,159,89,248,89,249,45,159,46" href="javascript:d43_click();" title="D43" alt="D43" />
+			<area shape="poly" coords="45,46,48,136,112,136,112,91,157,91,157,48,45,46" href="javascript:d42_click();" title="D42" alt="D42" />
 		</map>
 	</div>
+
+	<div class="inline" id="d42_content">
+		<div class="header">
+			<a href="javascript:ne_click();">Back to Section Map</a>
+		</div>
+		<h2>This is D42 Content</h2>
+	</div>
+
+	<div class="inline" id="d43_content">
+		<div class="header">
+			<a href="javascript:ne_click();">Back to Section Map</a>
+		</div>
+		<h2>This is D43 Content</h2>
+	</div>
+
+	<div class="inline" id="d44_content">
+		<div class="header">
+			<a href="javascript:ne_click();">Back to Section Map</a>
+		</div>
+		<h2>This is D44 Content</h2>
+	</div>
+
 </div>	
 
 <script>
@@ -29,6 +52,17 @@
 
 	function sw_click() {
 		$.colorbox({inline:true, href:"#sw_map"});
+	}
+
+	//stand and content clicks
+	function d42_click() {
+		$.colorbox({inline:true, href:"#d42_content"});
+	}
+	function d43_click() {
+		$.colorbox({inline:true, href:"#d43_content"});
+	}
+	function d44_click() {
+		$.colorbox({inline:true, href:"#d44_content"});
 	}
 
 	$('#tradeshowmap').maphilight();
