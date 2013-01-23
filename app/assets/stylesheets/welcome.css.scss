@@ -9,8 +9,25 @@ body {
 
 	.inline {
 		border: 4px solid #fff;
-		padding: 20px;
-		background-color: #222;
-		color: #eee;
+		//padding: 20px;
+		background-color: #999;
+		color: #333;
+		.stand-content {
+			position: relative;
+			height: 640px;
+			width: 940px;
+			.header {
+				background-color: #fff;
+				width: 920px;
+				padding: 10px;
+				height: 30px;
+			}
+			.copy {
+				overflow: scroll;
+				height: 590px;
+				width: 920px;
+				padding: 0 10px;
+			}
+		}
 	} 
 }
