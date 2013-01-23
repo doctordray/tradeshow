@@ -3,6 +3,9 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body {
+	* {
+		font: 16px Verdana;
+	}
 	.inline-content {
 		display: none;
 	}
@@ -29,5 +32,18 @@ body {
 				padding: 0 10px;
 			}
 		}
+	}
+
+	#welcome {
+		padding: 20px;
 	} 
+
+	button {
+		margin-top: 10px;
+		background-color: #33cc33;
+		border: #00aa00;
+		&:hover {
+			cursor: pointer;
+		}
+	}
 }

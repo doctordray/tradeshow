@@ -10,7 +10,10 @@
 <div id="inline">Show content in a lightbox</div>
 
 <div class="inline-content">
-	<div class="inline" id="myForm">This content should be sitting in a lightbox</div>
+	<div class="inline" id="welcome">
+		Please start by clicking on a section of the map you are interested in...
+		<button class="btn-close">Close</button>
+	</div>
 	
 	<div class="inline" id="ne_map">
 		<%= image_tag "tradeshow-map-NE.png", :name=>"tradeshowmapNE", :id=>"tradeshowmapNE", :usemap=>"#m_tradeshowmapNE" %>
@@ -31,6 +34,7 @@
 				<p>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse fermentum volutpat enim nec congue. Nam placerat nisi quis metus laoreet a dignissim quam accumsan. Maecenas tristique gravida tortor, vitae bibendum eros congue sit amet. Praesent nec urna quis lorem aliquam mattis vitae vitae tortor. Nunc tempor euismod nulla vel condimentum. Proin non libero quis risus rhoncus pretium. Pellentesque iaculis ultrices diam. Praesent auctor ipsum quis neque tincidunt vehicula. Aliquam erat volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Praesent molestie tincidunt ante non fringilla. Nam at tortor erat.
 				</p>
+				<iframe width="560" height="315" src="http://www.youtube.com/embed/W-0SYZFJhVk?list=UUV5uPjf7xTiii1-mQbmltiw" frameborder="0" allowfullscreen></iframe>
 				<p>
 					Nunc rhoncus urna id nibh molestie ultricies. Vivamus faucibus egestas arcu non varius. Fusce ultricies libero sit amet augue eleifend malesuada. Cras eu tortor a magna adipiscing cursus. Donec vehicula velit sit amet lectus tristique interdum. Sed varius sagittis enim. Nulla vulputate nisi ut ipsum placerat vel tincidunt magna gravida. Integer ornare aliquet placerat. Aenean tellus nibh, lacinia at posuere ut, suscipit et quam. Nullam a purus sapien, in fermentum velit. Ut viverra tellus quis libero vehicula tincidunt.
 				</P>
@@ -111,7 +115,7 @@
 	}
 
 	function sw_click() {
-		$.colorbox({inline:true, href:"#sw_map"});
+		({inline:true, href:"#sw_map"});
 	}
 
 	//stand and content clicks
@@ -125,7 +129,17 @@
 		$.colorbox({inline:true, href:"#d44_content"});
 	}
 
-	$('#tradeshowmap').maphilight();
-	$('#tradeshowmapNE').maphilight();
+	$('#tradeshowmap').maphilight({fillColor: 'ffff00'});
+	$('#tradeshowmapNE').maphilight({fillColor: 'ffff00'});
+
+	$(document).ready( function() {
+		//show a welcome dialog
+		$.colorbox({inline:true, href:"#welcome"});
+
+		//wire up close buttons
+		$('.btn-close').click( function() {
+			$.colorbox.close();
+		});
+	});
 </script>
 
