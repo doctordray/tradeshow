@@ -1,9 +1,9 @@
-<%= image_tag "tradeshow-map.png", :name=>"tradeshowmap", :id=>"tradeshowmap", :usemap=>"#m_tradeshowmap" %>
+<%= image_tag 'tradeshow-map.png', :name => 'tradeshowmap', :id => 'tradeshowmap', :usemap => '#m_tradeshowmap' %>
 <map name="m_tradeshowmap" id="m_tradeshowmap">
 	<area shape="rect" coords="22,710,662,1451" href="javascript:sw_click();" alt="" />
 	<area shape="rect" coords="22,19,651,710" href="javascript:nw_click();" alt="" />
 	<area shape="rect" coords="662,567,1200,1255" href="javascript:se_click();" alt="" />
-	<area shape="rect" coords="652,19,1199,520" href="javascript:ne_click();" alt="" />
+	<area shape="rect" coords="652,19,1199,520" href="javascript:ne_click();" alt="NE MAP" />
 </map>
 
 <div class="inline-content">
@@ -31,7 +31,6 @@
 				<p>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse fermentum volutpat enim nec congue. Nam placerat nisi quis metus laoreet a dignissim quam accumsan. Maecenas tristique gravida tortor, vitae bibendum eros congue sit amet. Praesent nec urna quis lorem aliquam mattis vitae vitae tortor. Nunc tempor euismod nulla vel condimentum. Proin non libero quis risus rhoncus pretium. Pellentesque iaculis ultrices diam. Praesent auctor ipsum quis neque tincidunt vehicula. Aliquam erat volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Praesent molestie tincidunt ante non fringilla. Nam at tortor erat.
 				</p>
-				<iframe width="560" height="315" src="http://www.youtube.com/embed/W-0SYZFJhVk?list=UUV5uPjf7xTiii1-mQbmltiw" frameborder="0" allowfullscreen></iframe>
 				<p>
 					Nunc rhoncus urna id nibh molestie ultricies. Vivamus faucibus egestas arcu non varius. Fusce ultricies libero sit amet augue eleifend malesuada. Cras eu tortor a magna adipiscing cursus. Donec vehicula velit sit amet lectus tristique interdum. Sed varius sagittis enim. Nulla vulputate nisi ut ipsum placerat vel tincidunt magna gravida. Integer ornare aliquet placerat. Aenean tellus nibh, lacinia at posuere ut, suscipit et quam. Nullam a purus sapien, in fermentum velit. Ut viverra tellus quis libero vehicula tincidunt.
 				</P>
@@ -112,7 +111,7 @@
 	}
 
 	function sw_click() {
-		({inline:true, href:"#sw_map"});
+		$.colorbox({inline:true, href:"#sw_map"});
 	}
 
 	//stand and content clicks
@@ -126,8 +125,10 @@
 		$.colorbox({inline:true, href:"#d44_content"});
 	}
 
-	$('#tradeshowmap').maphilight({fillColor: 'ffff00', strokeColor: '888800', shadowFrom: 'fill', shadowRadius: 16, shadowX: 10, shadowY: 10});
-	$('#tradeshowmapNE').maphilight({fillColor: 'ffff00', strokeColor: '888800', shadowFrom: 'fill', shadowRadius: 16, shadowX: 10, shadowY: 10});
+	//$('#tradeshowmap').maphilight({fillColor: 'ffff00', strokeColor: '888800', shadowFrom: 'fill', shadowRadius: 16, shadowX: 10, shadowY: 10});
+	//$('#tradeshowmapNE').maphilight({fillColor: 'ffff00', strokeColor: '888800', shadowFrom: 'fill', shadowRadius: 16, shadowX: 10, shadowY: 10});
+	$('#tradeshowmap').maphilight();
+	$('#tradeshowmapNE').maphilight();
 
 	$(document).ready( function() {
 		//show a welcome dialog
