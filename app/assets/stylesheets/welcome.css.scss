@@ -2,8 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+
 body {
-	background-color: #999;
+	background: asset-url("brand-stripe.gif", "image") repeat-x #eee;
 	* {
 		font: 16px Verdana;
 	}
@@ -14,7 +16,7 @@ body {
 	.inline {
 		border: 4px solid #fff;
 		//padding: 20px;
-		background-color: #999;
+		background-color: #eee;
 		color: #333;
 		.stand-content {
 			position: relative;
@@ -27,6 +29,7 @@ body {
 				height: 30px;
 			}
 			.copy {
+				background: asset-url("brand-stripe.gif", "image") repeat-x #eee;
 				overflow: scroll;
 				height: 590px;
 				width: 920px;
