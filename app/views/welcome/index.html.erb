@@ -37,7 +37,7 @@
 							<div class="number">D42</div>
 						</div>
 						<p class="company-description">
-							&quot;Our ideal client is an established small business that has out grown basic auto-responders, and are finding it hard to find the time to follow up with new leads and existing customers. We work with you on the strategy and implementation to automate your business workflow, sales pipeline, lead generation, customer follow up, and referrals.
+							<span class="lbl-about-us">in our words...</span>&quot;Our ideal client is an established small business that has out grown basic auto-responders, and are finding it hard to find the time to follow up with new leads and existing customers. We work with you on the strategy and implementation to automate your business workflow, sales pipeline, lead generation, customer follow up, and referrals.
 							We specialise in Infusionsoft and are experts at leveraging Infusionsoft's features to help meet and exceed your business goals. We study so you don't have to.&quot;&nbsp;-&nbsp;Karnie Paris (CEO)
 						</p>
 						<div class="divider"></div>
@@ -70,7 +70,19 @@
 						<div class="image-header">
 							Your Expo Hosts
 						</div>
-						<%= image_tag "company/on-the-fuze/csr-01.jpg", :class=>"csr" %>
+						<div id="slides">
+							<div class="slides_container">
+								<div>
+									<%= image_tag "company/on-the-fuze/csr-01.jpg", :class=>"csr" %>
+								</div>
+								<div>
+									<%= image_tag "company/on-the-fuze/csr-01.jpg", :class=>"csr" %>
+								</div>
+								<div>
+									<%= image_tag "company/on-the-fuze/csr-01.jpg", :class=>"csr" %>
+								</div>
+							</div>
+						</div>
 						<div class="widget">
 							<h3>Today's Free Seminars</h3>
 							<p>"How to KickStart Your Business" (30min) - Main Auditorium today at 2pm and 4pm</p>
@@ -166,6 +178,13 @@
 	//$('#tradeshowmapNE').maphilight();
 
 	$(document).ready( function() {
+		//wire up slideshow
+		$("#slides").slides({
+        preload: true,
+        generatePagination: false,
+        play: 3000
+      });
+
 		//show a welcome dialog
 		//$.colorbox({inline:true, href:"#welcome"});
 		$.colorbox({inline:true, href:"#d42_content"});
@@ -174,6 +193,7 @@
 		$('.btn-close').click( function() {
 			$.colorbox.close();
 		});
+
 	});
 </script>
 

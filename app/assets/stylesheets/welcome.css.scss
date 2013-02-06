@@ -52,6 +52,7 @@ body {
 					padding-left: 10px;
 				}
 				.side-column {
+					position: relative;
 					float: left;
 					padding-left: 10px;
 					padding-top: 10px;
@@ -107,6 +108,7 @@ body {
 		article {
 			display: block;
 			border-bottom: 1px solid $brand-blue;
+			padding: 10px 0px 20px;
 			.image-container {
 				float: left;
 				width: 200px;
@@ -135,6 +137,17 @@ body {
 			padding: 0px 10px;
 		}
 	}
+
+	.slides_container {
+	  width:228px;
+	  height:228px;
+		div {
+	    width:228px;
+	    height:228px;
+	    display:block;
+	  }
+  }
+
 	//text styles
 	h1 {
 		font-size: 3em;
@@ -161,6 +174,13 @@ body {
 	.company-description {
 		color: $brand-blue;
 		margin-bottom: 20px;
+		.lbl-about-us {
+			background-color: $brand-blue;
+			color: #fff;
+			padding: 0px 10px;
+			margin-right: 10px;
+			font-weight: 200;
+		}
 	}
 
 	.special {
