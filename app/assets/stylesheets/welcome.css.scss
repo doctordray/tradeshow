@@ -1,13 +1,18 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import url(http://fonts.googleapis.com/css?family=Rambla:400,700italic&subset=latin,latin-ext);
 
+$brand-orange: #ed5100;
+$brand-blue: #120b80;
+$brand-green: #62ac1e;
 
+$base-font: 'Rambla', sans-serif;
 
 body {
 	background: asset-url("brand-stripe.gif", "image") repeat-x #eee;
 	* {
-		font: 16px Verdana;
+		font: 1em $base-font;
 	}
 	.inline-content {
 		display: none;
@@ -23,19 +28,125 @@ body {
 			height: 640px;
 			width: 940px;
 			.header {
-				background-color: #fff;
 				width: 920px;
 				padding: 10px;
 				height: 30px;
+				background: asset-url("brand-stripe.gif", "image") repeat-x #eee bottom center;
 			}
 			.copy {
-				background: asset-url("brand-stripe.gif", "image") repeat-x #eee;
+				position: relative;
 				overflow: scroll;
 				height: 590px;
-				width: 920px;
-				padding: 0 10px;
+				width: 940px;
+				.main-column {
+					position: relative;
+					float: left;
+					width: 70%;
+					padding-left: 10px;
+				}
+				.side-column {
+					float: left;
+					padding-left: 10px;
+					padding-top: 10px;
+					width: 27%;
+				}
 			}
 		}
+	}
+
+	//box styles
+	.widget {
+		background-color: $brand-orange;
+		margin-top: 20px;
+		margin-right: 10px;
+		padding: 5px 10px;
+	}
+
+	.image-header {
+		background-color: $brand-orange;
+		width: 228px;
+		text-align: center;
+		padding: 2px 0px;
+	}
+
+	.divider {
+		background: asset-url("brand-stripe.gif", "image") repeat-x #eee;
+		height: 2px;
+		margin: 0px 0px 10px;
+	}
+
+	.stand-number {
+		position: absolute;
+		top: 0px;
+		right: 0px;	
+		padding: 20px;
+		background-color: $brand-green;
+		text-align: center
+	}
+	section {
+		display: block;
+		article {
+			display: block;
+			border-bottom: 1px solid $brand-blue;
+			.image-container {
+				float: left;
+				width: 200px;
+				&.place-right {
+					float: right;
+				}
+				img {
+					width: 180px;
+					margin: 0 10px;
+				}
+			}
+			.copy-container {
+				float: left;
+				width: 447px;
+				h2 {
+					margin: 0px;
+				}
+			}
+		}
+	}
+	//text styles
+	h1 {
+		font-size: 3em;
+		font-weight: bold;
+		font-style: italic;
+		&.company-name {
+			margin: 24px 0 48px 140px;
+		}
+	}
+
+	h2 {
+		font-size: 1.6em;
+		font-weight: bold;
+		font-style: italic;
+	}
+
+	h3 {
+		font-size: 1.1em;
+		line-height: 0.2em;
+		font-weight: bold;
+		font-style: italic;
+	}
+
+	.company-description {
+		color: $brand-blue;
+		margin-bottom: 20px;
+	}
+
+	.special {
+		color: $brand-blue;
+		font-weight: bold;
+	}
+
+	//img styles
+	img.logo {
+		width: 120px;
+		height: 120px;
+		position: absolute;
+		top: 0px;
 	}
 
 	#welcome {
@@ -50,4 +161,27 @@ body {
 			cursor: pointer;
 		}
 	}
+}
+
+
+//CLEARFIX styles
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+ 
+.clearfix {
+	display: inline-block;
+}
+ 
+html[xmlns] .clearfix {
+	display: block;
+}
+ 
+* html .clearfix {
+	height: 1%;
 }
