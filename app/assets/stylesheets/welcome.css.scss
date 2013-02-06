@@ -32,6 +32,13 @@ body {
 				padding: 10px;
 				height: 30px;
 				background: asset-url("brand-stripe.gif", "image") repeat-x #eee bottom center;
+				.logo {
+					height: 30px;
+					left: 551px;
+					position: absolute;
+					top: 17px;
+					width: 129px;
+				}
 			}
 			.copy {
 				position: relative;
