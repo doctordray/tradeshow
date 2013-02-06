@@ -67,6 +67,9 @@ body {
 		margin-top: 20px;
 		margin-right: 10px;
 		padding: 5px 10px;
+		h3 {
+			color: #eee;
+		}
 	}
 
 	.image-header {
@@ -74,6 +77,9 @@ body {
 		width: 228px;
 		text-align: center;
 		padding: 2px 0px;
+		font-style: italic;
+		font-weight: bold;
+		color: #eee;
 	}
 
 	.divider {
@@ -83,12 +89,18 @@ body {
 	}
 
 	.stand-number {
+		border-bottom: 1px dotted #333;
+		border-left: 1px dotted #333;
+		border-right: 1px dotted #333;
 		position: absolute;
 		top: 0px;
 		right: 0px;	
-		padding: 20px;
+		padding: 5px 20px;
 		background-color: $brand-green;
-		text-align: center
+		text-align: center;
+		.number {
+			font-size: 2em;
+		}
 	}
 	section {
 		display: block;
@@ -113,6 +125,14 @@ body {
 					margin: 0px;
 				}
 			}
+		}
+	}
+
+	.footer {
+		background-color: $brand-orange;
+		padding: 5px 10px;
+		.contact {
+			padding: 0px 10px;
 		}
 	}
 	//text styles
