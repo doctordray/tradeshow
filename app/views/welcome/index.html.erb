@@ -7,20 +7,20 @@
     <p>Please select a section of the map for a closer view</p>
     <%= image_tag 'tradeshow-map.png', :name => 'tradeshowmap', :id => 'tradeshowmap', :usemap => '#m_tradeshowmap', :width=>"496", :height=>"600" %>
     <map name="m_tradeshowmap" id="m_tradeshowmap">
-      <area shape="poly" coords="5,293,272,293,272,597,5,597,5,293" href="javascript:;" title="South Western Section" alt="South Western Section" />
-      <area shape="rect" coords="5,7,206,292" href="javascript:;" title="North Western Section" alt="North Western Section" />
-      <area shape="rect" coords="272,237,496,493" href="javascript:;" title="South Eastern Section" alt="South Eastern Section" />
-      <area shape="rect" coords="270,4,496,232" href="<%= url_for(:ne_section) %>" title="North Eastern Section" alt="North Eastern Section" />
+      <area shape="poly" coords="5,293,272,293,272,597,5,597,5,293" href="javascript:;" id="area_SW" title="South Western Section" alt="South Western Section" />
+      <area shape="rect" coords="5,7,206,292" href="javascript:;" id="area_NW" title="North Western Section" alt="North Western Section" />
+      <area shape="rect" coords="272,237,496,493" href="javascript:;" id="area_SE" title="South Eastern Section" alt="South Eastern Section" />
+      <area shape="rect" coords="270,4,496,232" href="<%= url_for(:ne_section) %>" id="area_NE" title="North Eastern Section" alt="North Eastern Section" />
     </map>
   </div>
   <div class="side-column">
     <div class="vertical-section-selector">
       <h3>Available Sections</h3>
       <nav>
-        <%= link_to "North Eastern Section", :ne_section %>
-        <%= link_to "North Western Section" %>
-        <%= link_to "South Eastern Section" %>
-        <%= link_to "South Western Section" %>
+        <%= link_to "North Eastern Section", :ne_section, :id=>"link_NE" %>
+        <%= link_to "North Western Section", '#', :id=>"link_NW" %>
+        <%= link_to "South Eastern Section", '#', :id=>"link_SE" %>
+        <%= link_to "South Western Section", '#', :id=>"link_SW" %>
       </nav>
     </div>
   </div>
@@ -28,9 +28,33 @@
 
 <script>
   
-  $('#tradeshowmap').maphilight({fillColor: 'ffff00', strokeColor: '888800', shadowFrom: 'fill', shadowRadius: 16, shadowX: 10, shadowY: 10});
+  $('#tradeshowmap').maphilight({fillColor: 'ed5100', strokeColor: '888800', shadowFrom: 'fill', shadowRadius: 16, shadowX: 10, shadowY: 10});
 
   $(document).ready( function() {
+
+  $('#link_NE').mouseover(function(e) {
+    $('#area_NE').mouseover();
+    }).mouseout(function(e) {
+    $('#area_NE').mouseout();
+  });
+
+  $('#link_NW').mouseover(function(e) {
+    $('#area_NW').mouseover();
+    }).mouseout(function(e) {
+    $('#area_NW').mouseout();
+  });
+
+  $('#link_SE').mouseover(function(e) {
+    $('#area_SE').mouseover();
+    }).mouseout(function(e) {
+    $('#area_SE').mouseout();
+  });
+
+  $('#link_SW').mouseover(function(e) {
+    $('#area_SW').mouseover();
+    }).mouseout(function(e) {
+    $('#area_SW').mouseout();
+  });
 
   });
 
