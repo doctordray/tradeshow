@@ -1,0 +1,208 @@
+<div class="container">
+	<%= image_tag 'tradeshow-map.png', :name => 'tradeshowmap', :id => 'tradeshowmap', :usemap => '#m_tradeshowmap', :width=>"496", :height=>"600" %>
+	<map name="m_tradeshowmap" id="m_tradeshowmap">
+		<area shape="poly" coords="5,293,272,293,272,597,5,597,5,293" href="javascript:;" title="sw" alt="sw" />
+		<area shape="rect" coords="5,7,206,292" href="javascript:;" title="nw" alt="nw" />
+		<area shape="rect" coords="272,237,496,493" href="javascript:;" title="se" alt="se" />
+		<area shape="rect" coords="270,4,496,232" href="javascript:ne_click();" title="ne" alt="ne" />
+	</map>
+</div>
+<div class="inline-content">
+	<div class="inline" id="welcome">
+		Please start by clicking on a section of the map you are interested in...
+		<button class="btn-close">Close</button>
+	</div>
+	
+	<div class="inline" id="ne_map">
+		<div class="stand-content">
+			<div class="header">
+				<a href="javascript:ne_click();">Back to Section Map</a>
+				<%= image_tag "wse-logo.png", :class=>"logo" %>
+			</div>
+			<div class="copy">
+				<%= image_tag "tradeshow-map-NE.png", :name=>"tradeshowmapNE", :id=>"tradeshowmapNE", :usemap=>"#m_tradeshowmapNE", :width=>"568", :height=>"600" %>
+				<map name="m_tradeshowmapNE" id="m_tradeshowmapNE">
+					<area shape="poly" coords="207,27,153,28,153,55,207,55,207,27" href="javascript:;" title="D44" alt="D44" />
+					<area shape="poly" coords="97,28,97,54,151,54,152,28,97,28" href="javascript:;" title="D43" alt="D43" />
+					<area shape="poly" coords="27,28,29,83,69,83,69,55,96,55,96,29,27,28" href="javascript:d42_click();" title="D42" alt="D42" />
+				</map>
+			</div>	
+		</div>
+	</div>
+
+	<div class="inline" id="d42_content">
+		<div class="stand-content">
+			<div class="header">
+				<a href="javascript:ne_click();">Back to Section Map</a>
+				<%= link_to "NE Section", :ne_section %>
+				<%= image_tag "wse-logo.png", :class=>"logo" %>
+			</div>
+			<div class="copy">
+				<div class="clearfix">
+					<div class="main-column">
+						<%= image_tag "company/on-the-fuze/logo.png", :class=>"logo" %>
+						<h1 class="company-name">On the Fuze</h1>
+						<div class="stand-number">
+							Stand
+							<div class="number">D42</div>
+						</div>
+						<p class="company-description">
+							<span class="lbl-about-us">in our words...</span>&quot;Our ideal client is an established small business that has out grown basic auto-responders, and are finding it hard to find the time to follow up with new leads and existing customers. We work with you on the strategy and implementation to automate your business workflow, sales pipeline, lead generation, customer follow up, and referrals.
+							We specialise in Infusionsoft and are experts at leveraging Infusionsoft's features to help meet and exceed your business goals. We study so you don't have to.&quot;&nbsp;-&nbsp;Karnie Paris (CEO)
+						</p>
+						<div class="divider"></div>
+						<section>
+							<article class="clearfix">
+								<div class="image-container">
+									<%= image_tag "company/on-the-fuze/wisdom.jpg", :class=>"" %>
+								</div>
+								<div class="copy-container">
+									<h2>What can you expect when you come and see us?</h2>
+									<p>
+										Nunc rhoncus urna id nibh molestie ultricies. Vivamus faucibus egestas arcu non varius. Fusce ultricies libero sit amet augue eleifend malesuada. Cras eu tortor a magna adipiscing cursus. Donec vehicula velit sit amet lectus tristique interdum. Sed varius sagittis enim. Nulla vulputate nisi ut ipsum placerat vel tincidunt magna gravida. Integer ornare aliquet placerat. Aenean tellus nibh, lacinia at posuere ut, suscipit et quam. Nullam a purus sapien, in fermentum velit. Ut viverra tellus quis libero vehicula tincidunt.
+									</P>
+								</div>
+							</article>
+							<article class="clearfix">
+								<div class="image-container place-right">
+									<%= image_tag "company/on-the-fuze/infusion-logo.png", :class=>"" %>
+								</div>
+								<div class="copy-container">
+									<h2>What is InfusionSoft?</h2>
+									<p>
+										Nunc rhoncus urna id nibh molestie ultricies. Vivamus faucibus egestas arcu non varius. Fusce ultricies libero sit amet augue eleifend malesuada. Cras eu tortor a magna adipiscing cursus. Donec vehicula velit sit amet lectus tristique interdum. Sed varius sagittis enim. Nulla vulputate nisi ut ipsum placerat vel tincidunt magna gravida. Integer ornare aliquet placerat. Aenean tellus nibh, lacinia at posuere ut, suscipit et quam. Nullam a purus sapien, in fermentum velit. Ut viverra tellus quis libero vehicula tincidunt.
+									</P>
+								</div>
+							</article>
+						</section>
+					</div>
+					<div class="side-column">
+						<div class="image-header">
+							Your Expo Hosts
+						</div>
+						<div id="slides">
+							<div class="slides_container">
+								<div>
+									<%= image_tag "company/on-the-fuze/csr-01.jpg", :class=>"csr" %>
+								</div>
+								<div>
+									<%= image_tag "company/on-the-fuze/csr-01.jpg", :class=>"csr" %>
+								</div>
+								<div>
+									<%= image_tag "company/on-the-fuze/csr-01.jpg", :class=>"csr" %>
+								</div>
+							</div>
+						</div>
+						<div class="widget">
+							<h3>Today's Free Seminars</h3>
+							<p>"How to KickStart Your Business" (30min) - Main Auditorium today at 2pm and 4pm</p>
+						</div>
+						<div class="widget">
+							<h3>Today's Expo Special</h3>
+							<p class="special">
+								30% off Kickstart Package
+							</p>
+							<p>Ask one of our friendly staff at the stand about it!</p>
+						</div>
+						<div class="widget">
+							<h3>Chat Online</h3>
+						</div>
+					</div>
+				</div>
+				<div class="footer">
+					Contact Us: <span class="contact"><a href="tel://0-733-951-972">07 3395 1972</a></span> | <span class="contact"><a href="mailto:info@onthefuze.com.au">info@onthefuze.com.au</a></span> | <span class="contact">Brisbane QLD</span>
+				</div>	
+			</div>
+		</div>
+	</div>
+
+	<div class="inline" id="d43_content">
+		<div class="stand-content">
+			<div class="header">
+				<a href="javascript:ne_click();">Back to Section Map</a>
+			</div>
+			<div class="copy">
+				<div class="main-column">
+					<h2>This is D43 Content</h2>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse fermentum volutpat enim nec congue. Nam placerat nisi quis metus laoreet a dignissim quam accumsan. Maecenas tristique gravida tortor, vitae bibendum eros congue sit amet. Praesent nec urna quis lorem aliquam mattis vitae vitae tortor. Nunc tempor euismod nulla vel condimentum. Proin non libero quis risus rhoncus pretium. Pellentesque iaculis ultrices diam. Praesent auctor ipsum quis neque tincidunt vehicula. Aliquam erat volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Praesent molestie tincidunt ante non fringilla. Nam at tortor erat.
+					</p>
+					<p>
+						Nunc rhoncus urna id nibh molestie ultricies. Vivamus faucibus egestas arcu non varius. Fusce ultricies libero sit amet augue eleifend malesuada. Cras eu tortor a magna adipiscing cursus. Donec vehicula velit sit amet lectus tristique interdum. Sed varius sagittis enim. Nulla vulputate nisi ut ipsum placerat vel tincidunt magna gravida. Integer ornare aliquet placerat. Aenean tellus nibh, lacinia at posuere ut, suscipit et quam. Nullam a purus sapien, in fermentum velit. Ut viverra tellus quis libero vehicula tincidunt.
+					</P>
+					<p>
+						Vestibulum ornare nisl risus. Fusce nec metus lacus. Morbi porttitor euismod eros, vel dapibus massa pellentesque a. Phasellus gravida feugiat elementum. Vestibulum in ligula orci, vitae faucibus erat. Fusce justo est, euismod nec consequat eget, condimentum in nisl. Cras mollis, orci eu ullamcorper lobortis, sapien risus laoreet ante, quis dignissim nisl nisl quis elit. Sed lacinia augue non metus elementum volutpat interdum neque cursus. Phasellus vestibulum tellus nec sem gravida in aliquam lectus porttitor. Praesent nec tempus augue. Aliquam eget tellus quis turpis rutrum tristique id a nunc. Curabitur sit amet magna nulla, et viverra ipsum. Aenean sodales tincidunt dolor, eu vulputate ante rutrum sed.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="inline" id="d44_content">
+		<div class="stand-content">
+			<div class="header">
+				<a href="javascript:ne_click();">Back to Section Map</a>
+			</div>
+			<div class="copy">
+				<div class="main-column">
+					<h2>This is D44 Content</h2>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse fermentum volutpat enim nec congue. Nam placerat nisi quis metus laoreet a dignissim quam accumsan. Maecenas tristique gravida tortor, vitae bibendum eros congue sit amet. Praesent nec urna quis lorem aliquam mattis vitae vitae tortor. Nunc tempor euismod nulla vel condimentum. Proin non libero quis risus rhoncus pretium. Pellentesque iaculis ultrices diam. Praesent auctor ipsum quis neque tincidunt vehicula. Aliquam erat volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Praesent molestie tincidunt ante non fringilla. Nam at tortor erat.
+					</p>
+					<p>
+						Nunc rhoncus urna id nibh molestie ultricies. Vivamus faucibus egestas arcu non varius. Fusce ultricies libero sit amet augue eleifend malesuada. Cras eu tortor a magna adipiscing cursus. Donec vehicula velit sit amet lectus tristique interdum. Sed varius sagittis enim. Nulla vulputate nisi ut ipsum placerat vel tincidunt magna gravida. Integer ornare aliquet placerat. Aenean tellus nibh, lacinia at posuere ut, suscipit et quam. Nullam a purus sapien, in fermentum velit. Ut viverra tellus quis libero vehicula tincidunt.
+					</P>
+					<p>
+						Vestibulum ornare nisl risus. Fusce nec metus lacus. Morbi porttitor euismod eros, vel dapibus massa pellentesque a. Phasellus gravida feugiat elementum. Vestibulum in ligula orci, vitae faucibus erat. Fusce justo est, euismod nec consequat eget, condimentum in nisl. Cras mollis, orci eu ullamcorper lobortis, sapien risus laoreet ante, quis dignissim nisl nisl quis elit. Sed lacinia augue non metus elementum volutpat interdum neque cursus. Phasellus vestibulum tellus nec sem gravida in aliquam lectus porttitor. Praesent nec tempus augue. Aliquam eget tellus quis turpis rutrum tristique id a nunc. Curabitur sit amet magna nulla, et viverra ipsum. Aenean sodales tincidunt dolor, eu vulputate ante rutrum sed.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>	
+
+<script>
+	
+	function ne_click() {
+		$.colorbox({inline:true, href:"#ne_map"});
+	}
+
+	function sw_click() {
+		$.colorbox({inline:true, href:"#sw_map"});
+	}
+
+	//stand and content clicks
+	function d42_click() {
+		$.colorbox({inline:true, close: "close", href:"#d42_content"});
+	}
+	function d43_click() {
+		$.colorbox({inline:true, href:"#d43_content"});
+	}
+	function d44_click() {
+		$.colorbox({inline:true, href:"#d44_content"});
+	}
+
+	$('#tradeshowmap').maphilight({fillColor: 'ffff00', strokeColor: '888800', shadowFrom: 'fill', shadowRadius: 16, shadowX: 10, shadowY: 10});
+	$('#tradeshowmapNE').maphilight({fillColor: 'ffff00', strokeColor: '888800', shadowFrom: 'fill', shadowRadius: 16, shadowX: 10, shadowY: 10});
+	//$('#tradeshowmap').maphilight();
+	//$('#tradeshowmapNE').maphilight();
+
+	$(document).ready( function() {
+		//wire up slideshow
+		$("#slides").slides({
+        preload: true,
+        generatePagination: false,
+        play: 3000
+      });
+
+		//show a welcome dialog
+		//$.colorbox({inline:true, href:"#welcome"});
+		$.colorbox({inline:true, close: "Exit", href:"#d42_content"});
+
+		//wire up close buttons
+		$('.btn-close').click( function() {
+			$.colorbox.close();
+		});
+
+	});
+</script>

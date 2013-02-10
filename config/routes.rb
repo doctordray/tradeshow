@@ -1,6 +1,9 @@
 Tradeshow::Application.routes.draw do
-  get "welcome/index"
-
+  match "/" => "welcome#index", :as => :home
+  match "ne_section" => "welcome#ne_section", :as => :ne_section
+  match "stand/on_the_fuze" => "welcome#on_the_fuze", :as => :on_the_fuze
+  get "welcome/index_one_page"
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
