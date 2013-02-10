@@ -3,6 +3,20 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import url(http://fonts.googleapis.com/css?family=Rambla:400,700italic&subset=latin,latin-ext);
 
+@mixin box-emboss($x_offset, $y_offset, $blur, $spread, $color) {
+  -moz-box-shadow:    $x_offset $y_offset $blur $spread $color;
+	-webkit-box-shadow: $x_offset $y_offset $blur $spread $color;
+	box-shadow:         $x_offset $y_offset $blur $spread $color;
+
+}
+
+@mixin brand-radius {
+	-moz-border-radius: 0 16px 0 16px;
+	-webkit-border-radius: 0 16px 0 16px;
+	border-radius: 0 16px 0 16px; /* future proofing */
+	-khtml-border-radius: 0 16px 0 16px; /* for old Konqueror browsers */			
+}
+
 $brand-orange: #ed5100;
 $brand-blue: #120b80;
 $brand-green: #62ac1e;
@@ -32,7 +46,6 @@ body {
 	}
 	.bg-spot {
 		background: asset-url("bg-spotlight.jpg", "image") no-repeat center top #acacac;
-		padding-bottom: 40px;
 	}
 	.bg-brand-stripe {
 		background: asset-url("brand-stripe.gif", "image") repeat-x transparent;
@@ -41,6 +54,10 @@ body {
 		width: 960px;
 		margin: 0 auto;
 		position: relative;
+		&.main {
+			background-color: #eee;
+			padding-bottom: 40px;
+		}
 	}
 
 	header {
@@ -137,6 +154,7 @@ body {
 
 	//box styles
 	.breadcrumb {
+		padding-left: 10px;
 		padding-top: 10px;
 		padding-bottom: 20px;
 	}
@@ -170,10 +188,11 @@ body {
 		margin-right: 10px;
 		padding: 5px 10px;
 
-		-moz-border-radius: 0 16px 0 16px;
-		-webkit-border-radius: 0 16px 0 16px;
-		border-radius: 0 16px 0 16px; /* future proofing */
-		-khtml-border-radius: 0 16px 0 16px; /* for old Konqueror browsers */			
+		//-moz-border-radius: 0 16px 0 16px;
+		//-webkit-border-radius: 0 16px 0 16px;
+		//border-radius: 0 16px 0 16px; /* future proofing */
+		//-khtml-border-radius: 0 16px 0 16px; /* for old Konqueror browsers */			
+		@include brand-radius;
 
 		h3 {
 			color: #eee;
@@ -192,7 +211,7 @@ body {
 		text-shadow: 1px 1px 1px #000;
 	}
 
-	.divider {
+	.brand-divider {
 		background: asset-url("brand-stripe.gif", "image") repeat-x #eee;
 		height: 2px;
 		margin: 0px 0px 10px;
@@ -208,6 +227,13 @@ body {
 		padding: 5px 20px;
 		background-color: $brand-green;
 		text-align: center;
+
+	  //-moz-box-shadow:    0px 3px 3px 0px #666;
+	  //-webkit-box-shadow: 0px 3px 3px 0px #666;
+	  //box-shadow:         0px 3px 3px 0px #666;
+
+		@include box-emboss(0px, 3px, 3px, 0px, #666);
+
 		.number {
 			font-size: 2em;
 		}
@@ -241,7 +267,10 @@ body {
 
 	.footer {
 		background-color: $vendor-orange;
+		margin: 0px 10px;
 		padding: 10px 10px 30px;
+		@include brand-radius;
+
 		.contact {
 			padding: 0px 10px;
 		}
