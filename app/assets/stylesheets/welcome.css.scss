@@ -261,6 +261,16 @@ body {
 				h2 {
 					margin: 0px;
 				}
+				&.video {
+					float: left;
+					width: 360px;
+					padding-left: 10px;
+				}
+			}
+			.video-container {
+				float: left;
+				padding-top: 8px;
+				width: 280px;
 			}
 		}
 	}
