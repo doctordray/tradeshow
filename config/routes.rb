@@ -2,6 +2,7 @@ Tradeshow::Application.routes.draw do
   match "/" => "welcome#index", :as => :home
   match "ne_section" => "welcome#ne_section", :as => :ne_section
   match "stand/on_the_fuze" => "welcome#on_the_fuze", :as => :on_the_fuze
+  match "stand/worldstage_expo" => "welcome#worldstage_expo", :as => :worldstage_expo
   get "welcome/index_one_page"
   
   # The priority is based upon order of creation:

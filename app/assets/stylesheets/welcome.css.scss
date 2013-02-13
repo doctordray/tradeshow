@@ -17,11 +17,13 @@
 	-khtml-border-radius: 0 16px 0 16px; /* for old Konqueror browsers */			
 }
 
-$brand-orange: #ed5100;
-$brand-blue: #120b80;
-$brand-green: #62ac1e;
+$wse-orange: #ed5100;
+$wse-green: #62ac1e;
+$wse-blue: #120b80;
 
-$vendor-orange: #F28850;
+$brand-orange: #f7941e;
+$brand-blue: #00a7e5;
+$brand-green: #8dc63f;
 
 $base-font: 'Rambla', sans-serif;
 
@@ -48,7 +50,7 @@ body {
 		background: asset-url("bg-spotlight.jpg", "image") no-repeat center top #acacac;
 	}
 	.bg-brand-stripe {
-		background: asset-url("brand-stripe.gif", "image") repeat-x transparent;
+		background: asset-url("brand-stripe-your-expo.png", "image") repeat-x transparent;
 	}
 	.container {
 		width: 960px;
@@ -67,14 +69,33 @@ body {
 		a.logo {
 			display: block;
 			position: absolute;
-			top: 0px;
+			top: 10px;
 			left: 0px;
-			img.logo-wse-home {
-			
+			img.logo-home {
+			}
+		}
+		.wse-logo-container {
+			color: $wse-orange;
+			position: absolute;
+			top: 10px;
+			right: 0px;
+			width: 200px;
+			vertical-align: middle;
+			.text {
+				font-size: 0.8em;
+				text-align: right;
+				margin-top: -5px;
+				margin-right: 7px;
+			}
+			img.wse-logo {
+				height: 47px;
+				margin-top: -5px;
+				width: 200px;
+				vertical-align: middle;
 			}
 		}
 		nav {
-			margin: 69px 0 0 430px;
+			margin: 69px 0 0 380px;
 
 			a {
 				color: $brand-orange;
@@ -82,9 +103,13 @@ body {
 				font-style: italic;
 				padding-right: 40px;
 				text-decoration: none;
+				text-shadow: none;
 				&:hover {
 					text-decoration: underline;
 				}
+			}
+			.floor-plan {
+				margin-right: 40px;
 			}
 		}
 	}
@@ -105,7 +130,7 @@ body {
 				width: 920px;
 				padding: 10px;
 				height: 30px;
-				background: asset-url("brand-stripe.gif", "image") repeat-x #eee bottom center;
+				background: asset-url("brand-stripe-your-expo.png", "image") repeat-x #eee bottom center;
 				.logo {
 					height: 30px;
 					left: 551px;
@@ -160,7 +185,7 @@ body {
 	}
 	.widget {
 
-		background-color: $vendor-orange;
+		background-color: $brand-orange;
 		/* IE9 SVG, needs conditional override of 'filter' to 'none' */
 		
 		//background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VkNTEwMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmFhN2YiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
@@ -201,7 +226,7 @@ body {
 	}
 
 	.image-header {
-		background-color: $vendor-orange;
+		background-color: $brand-orange;
 		width: 228px;
 		text-align: center;
 		padding: 2px 0px;
@@ -212,7 +237,7 @@ body {
 	}
 
 	.brand-divider {
-		background: asset-url("brand-stripe.gif", "image") repeat-x #eee;
+		background: asset-url("brand-stripe-your-expo.png", "image") repeat-x #eee;
 		height: 2px;
 		margin: 0px 0px 10px;
 	}
@@ -277,7 +302,7 @@ body {
 	}
 
 	.footer {
-		background-color: $vendor-orange;
+		background-color: $brand-orange;
 		margin: 0px 10px;
 		padding: 10px 10px 30px;
 		@include brand-radius;
@@ -338,10 +363,10 @@ body {
 	}
 
 	.company-description {
-		color: $brand-blue;
+		color: #333;
 		margin-bottom: 20px;
 		.lbl-about-us {
-			background-color: #BE86FF;
+			background-color: $brand-green;
 			color: #fff;
 			padding: 0px 10px;
 			margin-right: 10px;
@@ -350,6 +375,9 @@ body {
 			-webkit-border-radius: 0 6px 0 6px;
 			border-radius: 0 6px 0 6px; /* future proofing */
 			-khtml-border-radius: 0 6px 0 6px; /* for old Konqueror browsers */			
+		}
+		.quoted {
+			color: #888;
 		}
 	}
 
