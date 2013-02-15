@@ -24,6 +24,7 @@ $wse-blue: #120b80;
 $brand-orange: #f7941e;
 $brand-blue: #00a7e5;
 $brand-green: #8dc63f;
+$brand-blue-dark: darken( $brand-blue,10%);
 
 $header-height: 96px;
 
@@ -232,12 +233,16 @@ body {
 			text-shadow: 1px 1px 1px #000;
 		}
 
+		.special {
+			color: $brand-blue-dark;
+		}
 		&.sponsors {
 			a {
 				display: block;
 				text-align: center;
 			}
 		}
+
 	}
 
 	.image-header {
@@ -326,7 +331,8 @@ body {
 			padding: 0px 10px;
 		}
 		a {
-			color: $brand-blue;
+			color: $brand-blue-dark;
+			text-shadow: none;
 		}
 	}
 
