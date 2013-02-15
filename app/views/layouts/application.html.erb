@@ -7,8 +7,8 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div class="bg-brand-stripe">
-    <div class="container head">
+  <div class="bg-brand-stripe header">
+    <div class="container">
       <header>
         <%= link_to(:home, :class=>"logo", :title=>"Your Expo Northern Beaches") do %>
           <%= image_tag "your-expo-logo.png", :class=>"logo-home", :alt=>"Your Expo Northern Beaches" %>
@@ -19,8 +19,7 @@
         </div>
         <nav class="main">
           <%= link_to "Interactive Floor Plan", :home, :class=>"floor-plan" %>
-          <a href="">About WSE</a>
-          <a href="">Contact WSE</a>
+          <%= link_to "Travelling to the Expo", "#", :class=>"floor-plan" %>
         </nav>
       </header>
     </div>
@@ -30,6 +29,14 @@
     <%= yield %>
     </div>
   </div>    
-
+  <div class="bg-brand-stripe footer">
+    <footer class="container">
+      <nav class="footer">
+        <span class="copyright">&copy;&nbsp;2013 WorldStage Expo</span>
+        <a href="">About WSE</a>
+        <a href="">Contact WSE</a>
+      </nav>
+      </footer>
+  </div>
 </body>
 </html>
