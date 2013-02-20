@@ -10,11 +10,11 @@
 
 }
 
-@mixin brand-radius {
-	-moz-border-radius: 0 16px 0 16px;
-	-webkit-border-radius: 0 16px 0 16px;
-	border-radius: 0 16px 0 16px; /* future proofing */
-	-khtml-border-radius: 0 16px 0 16px; /* for old Konqueror browsers */			
+@mixin brand-radius($val1, $val2, $val3, $val4) {
+	-moz-border-radius: $val1 $val2 $val3 $val4;
+	-webkit-border-radius: $val1 $val2 $val3 $val4;
+	border-radius: $val1 $val2 $val3 $val4; /* future proofing */
+	-khtml-border-radius: $val1 $val2 $val3 $val4; /* for old Konqueror browsers */
 }
 
 $wse-orange: #ed5100;
@@ -225,8 +225,8 @@ body {
 		//-moz-border-radius: 0 16px 0 16px;
 		//-webkit-border-radius: 0 16px 0 16px;
 		//border-radius: 0 16px 0 16px; /* future proofing */
-		//-khtml-border-radius: 0 16px 0 16px; /* for old Konqueror browsers */			
-		@include brand-radius;
+		//-khtml-border-radius: 0 16px 0 16px; /* for old Konqueror browsers */
+		@include brand-radius(0, 16px, 0, 16px);
 
 		h3 {
 			color: #eee;
@@ -268,7 +268,7 @@ body {
 		border-right: 1px dotted #333;
 		position: absolute;
 		top: 0px;
-		left: 548px;	
+		left: 548px;
 		padding: 5px 20px;
 		background-color: $brand-green;
 		text-align: center;
@@ -325,7 +325,7 @@ body {
 		background-color: $brand-orange;
 		margin: 0px 10px;
 		padding: 10px 10px;
-		@include brand-radius;
+		@include brand-radius(0, 16px, 0, 16px);
 		height: 20px;
 		.contact {
 			padding: 0px 10px;
@@ -395,7 +395,7 @@ body {
 			-moz-border-radius: 0 6px 0 6px;
 			-webkit-border-radius: 0 6px 0 6px;
 			border-radius: 0 6px 0 6px; /* future proofing */
-			-khtml-border-radius: 0 6px 0 6px; /* for old Konqueror browsers */			
+			-khtml-border-radius: 0 6px 0 6px; /* for old Konqueror browsers */
 		}
 		.quoted {
 			color: #888;
@@ -417,7 +417,7 @@ body {
 
 	#welcome {
 		padding: 20px;
-	} 
+	}
 
 	button {
 		margin-top: 10px;
@@ -431,7 +431,7 @@ body {
 
 //colorbox overrides
 #cboxClose {
-	display: none!important;	
+	display: none!important;
 }
 
 //CLEARFIX styles
@@ -443,15 +443,15 @@ body {
 	line-height: 0;
 	height: 0;
 }
- 
+
 .clearfix {
 	display: inline-block;
 }
- 
+
 html[xmlns] .clearfix {
 	display: block;
 }
- 
+
 * html .clearfix {
 	height: 1%;
 }
