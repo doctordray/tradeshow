@@ -12,8 +12,6 @@
     <map name="m_tradeshowmapNE" id="m_tradeshowmapNE">
       <area shape="poly" coords="357,378,399,378,399,405,357,405,357,378" href="<%= url_for(:worldstage_expo) %>" id="area_H100" title="WorldStage Expo" alt="WorldStage Expo" />
       <area shape="poly" coords="357,405,399,405,399,434,357,434,357,405" href="<%= url_for(:on_the_fuze) %>" id="area_H89" title="On The Fuze" alt="On The Fuze" />
-      <area shape="poly" coords="364,385,406,385,406,412,364,412,364,385" href="javascript:;" title="H100" alt="H100" />
-      <area shape="poly" coords="364,412,406,412,406,441,364,441,364,412" href="javascript:;" title="H89" alt="H89" />
       <area shape="poly" coords="207,27,153,28,153,55,207,55,207,27" href="javascript:;" title="D44" alt="D44" />
       <area shape="poly" coords="97,28,97,54,151,54,152,28,97,28" href="javascript:;" title="D43" alt="D43" />
       <area shape="poly" coords="27,28,29,83,69,83,69,55,96,55,96,29,27,28" href="" id="area_D42" title="D42" alt="D42" />
@@ -35,9 +33,9 @@
 </div>
 
 <script>
-  
+
   $('#tradeshowmapNE').maphilight({fillColor: 'ed5100', strokeColor: '888800', shadowFrom: 'fill', shadowRadius: 16, shadowX: 10, shadowY: 10});
- 
+
   $('#link_H89').mouseover(function(e) {
     $('#area_H89').mouseover();
     }).mouseout(function(e) {
@@ -51,6 +49,6 @@
   });
 
   $(document).ready( function() {
- 
+
   });
 </script>
