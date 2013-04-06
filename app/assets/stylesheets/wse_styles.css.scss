@@ -103,6 +103,9 @@ body {
 			.copyright {
 				font-style: italic;
 			}
+      a {
+        display: none; //temporarily hide these links
+      }
 		}
 	}
 	.container {
@@ -115,12 +118,12 @@ body {
 		}
 
     .home-header {
-      color: $wse-orange;
+      color: $wse-blue;
       font: 3.5em/1.2em $base-font;
       position: absolute;
       right: 32px;
       text-align: right;
-      text-shadow: 1px 1px 2px #222;
+      //text-shadow: 0px 1px 0px $wse-orange;
       top: 115px;
       width: 580px;
     }
@@ -138,13 +141,17 @@ body {
       p {
         margin: 0px 0px 20px;
         &.interested {
+          color: $wse-green;
+          font-weight: bold;
           margin-bottom: 5px;
         }
         &.action {
           color: $wse-orange;
           font: 1.4em/1.2em $base-font;
-          font-weight: bold;
+          //font-weight: bold;
           margin-bottom: 0px;
+          text-align: center;
+          //text-shadow: 0px 1px 0px #222;
         }
       }
       b {
