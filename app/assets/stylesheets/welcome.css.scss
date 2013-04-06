@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import url(http://fonts.googleapis.com/css?family=Rambla:400,700italic&subset=latin,latin-ext);
+@import "compass";
 
 @mixin box-emboss($x_offset, $y_offset, $blur, $spread, $color) {
   -moz-box-shadow:    $x_offset $y_offset $blur $spread $color;
@@ -17,14 +18,38 @@
 	-khtml-border-radius: $val1 $val2 $val3 $val4; /* for old Konqueror browsers */
 }
 
+@mixin set-all-radius($val) {
+  -moz-border-radius: $val;
+  -webkit-border-radius: $val;
+  border-radius: $val; /* future proofing */
+  -khtml-border-radius: $val; /* for old Konqueror browsers */
+}
+
+
 $wse-orange: #ed5100;
+$wse-orange-light: lighten( $wse-orange,20%);
+
 $wse-green: #62ac1e;
 $wse-blue: #120b80;
 
 $brand-orange: #f7941e;
 $brand-blue: #00a7e5;
 $brand-green: #8dc63f;
+
+$brand-orange-light: lighten( $brand-orange,10%);
+$brand-orange-lighter: lighten( $brand-orange,20%);
+$brand-orange-dark: darken( $brand-orange,10%);
+$brand-orange-darker: darken( $brand-orange,20%);
+
+$brand-blue-light: lighten( $brand-blue,10%);
+$brand-blue-lighter: lighten( $brand-blue,20%);
 $brand-blue-dark: darken( $brand-blue,10%);
+$brand-blue-darker: darken( $brand-blue,20%);
+
+$brand-green-light: lighten( $brand-green,10%);
+$brand-green-lighter: lighten( $brand-green,20%);
+$brand-green-dark: darken( $brand-green,10%);
+$brand-green-darker: darken( $brand-green,20%);
 
 $header-height: 96px;
 
@@ -421,7 +446,7 @@ body {
 
 	button {
 		margin-top: 10px;
-		background-color: #33cc33;
+		background-color: $brand-orange;
 		border: #00aa00;
 		&:hover {
 			cursor: pointer;
@@ -432,6 +457,23 @@ body {
 //colorbox overrides
 #cboxClose {
 	display: none!important;
+}
+
+.colorbox-content {
+  width: 900px;
+  text-align: center;
+}
+
+.btn-close {
+  background-color: $wse-orange; // Old browsers
+  @include filter-gradient($wse-orange-light, $wse-orange, vertical); // IE6-9
+  @include background-image(linear-gradient(top,  $wse-orange-light 0%, $wse-orange 100%));
+  border-radius: 8px 8px 8px 8px;
+  color: #120B80;
+  display: block;
+  margin: 0 auto;
+  padding: 5px 30px;
+  text-align: center;
 }
 
 //CLEARFIX styles
