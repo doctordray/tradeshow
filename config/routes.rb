@@ -1,6 +1,7 @@
 Tradeshow::Application.routes.draw do
-  match "/" => "welcome#index", :as => :home
+  match "/" => "welcome#wse_home", :as => :home
   match "/?splash=none" => "welcome#index", :as => :home_no_splash
+  match "/about_wse" => "welcome#about_wse", :as => :about_wse
   match "ne_section" => "welcome#ne_section", :as => :ne_section
   match "stand/on_the_fuze" => "welcome#on_the_fuze", :as => :on_the_fuze
   match "stand/worldstage_expo" => "welcome#worldstage_expo", :as => :worldstage_expo
@@ -55,7 +56,7 @@ Tradeshow::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'welcome#index'
+  root :to => 'welcome#wse_home'
 
   # See how all your routes lay out with "rake routes"
 

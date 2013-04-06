@@ -1,0 +1,499 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import url(http://fonts.googleapis.com/css?family=Rambla:400,700italic&subset=latin,latin-ext);
+@import "compass";
+
+@mixin box-emboss($x_offset, $y_offset, $blur, $spread, $color) {
+  -moz-box-shadow:    $x_offset $y_offset $blur $spread $color;
+  -webkit-box-shadow: $x_offset $y_offset $blur $spread $color;
+  box-shadow:         $x_offset $y_offset $blur $spread $color;
+
+}
+
+@mixin brand-radius($val1, $val2, $val3, $val4) {
+  -moz-border-radius: $val1 $val2 $val3 $val4;
+  -webkit-border-radius: $val1 $val2 $val3 $val4;
+  border-radius: $val1 $val2 $val3 $val4; /* future proofing */
+  -khtml-border-radius: $val1 $val2 $val3 $val4; /* for old Konqueror browsers */
+}
+
+@mixin set-all-radius($val) {
+  -moz-border-radius: $val;
+  -webkit-border-radius: $val;
+  border-radius: $val; /* future proofing */
+  -khtml-border-radius: $val; /* for old Konqueror browsers */
+}
+
+
+$wse-orange: #ed5100;
+$wse-orange-light: lighten( $wse-orange,20%);
+
+$wse-green: #62ac1e;
+$wse-blue: #120b80;
+
+$brand-orange: #f7941e;
+$brand-blue: #00a7e5;
+$brand-green: #8dc63f;
+
+$brand-orange-light: lighten( $brand-orange,10%);
+$brand-orange-lighter: lighten( $brand-orange,20%);
+$brand-orange-dark: darken( $brand-orange,10%);
+$brand-orange-darker: darken( $brand-orange,20%);
+
+$brand-blue-light: lighten( $brand-blue,10%);
+$brand-blue-lighter: lighten( $brand-blue,20%);
+$brand-blue-dark: darken( $brand-blue,10%);
+$brand-blue-darker: darken( $brand-blue,20%);
+
+$brand-green-light: lighten( $brand-green,10%);
+$brand-green-lighter: lighten( $brand-green,20%);
+$brand-green-dark: darken( $brand-green,10%);
+$brand-green-darker: darken( $brand-green,20%);
+
+$header-height: 96px;
+
+$base-font: 'Rambla', sans-serif;
+
+html {
+  overflow-y: scroll;
+}
+
+a {
+  color: $brand-orange;
+  text-shadow: 1px 1px 1px #aaa;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  * {
+    font: 1em $base-font;
+  }
+  .bg-spot {
+    background: asset-url("bg-spotlight.jpg", "image") no-repeat center top #acacac;
+  }
+
+  .bg-brand-stripe {
+    background: asset-url("brand-stripe-your-expo.png", "image") repeat-x #fff;
+  }
+  .header {
+    position: fixed;
+    top: 0px;
+    center: 0px;
+    height: $header-height;
+    width: 100%;
+    z-index: 100;
+    @include box-emboss(1px, 1px, 5px, 1px, #888);
+  }
+
+  .footer {
+    height: 40px;
+    padding-top: 10px;
+
+    nav {
+      padding-left: 10px;
+
+      .copyright, a {
+          color: #444;
+          margin-right: 40px;
+      }
+      .copyright {
+        font-style: italic;
+      }
+    }
+  }
+  .container {
+    width: 960px;
+    margin: 0 auto;
+    position: relative;
+    &.main {
+      margin-top: $header-height;
+      background-color: #eee;
+      padding-bottom: 10px;
+    }
+  }
+
+  header {
+    height: 96px;
+    overflow: hidden;
+    position: relative;
+    a.logo {
+      display: block;
+      position: absolute;
+      top: 10px;
+      left: 0px;
+      img.logo-home {
+      }
+    }
+    .wse-logo-container {
+      color: $wse-orange;
+      position: absolute;
+      top: 10px;
+      right: 0px;
+      width: 200px;
+      vertical-align: middle;
+      .text {
+        font-size: 0.8em;
+        text-align: right;
+        margin-top: -5px;
+        margin-right: 7px;
+      }
+      img.wse-logo {
+        height: 47px;
+        margin-top: -5px;
+        width: 200px;
+        vertical-align: middle;
+      }
+    }
+    nav {
+      margin: 69px 0 0 280px;
+
+      a {
+        color: $brand-orange;
+        font-weight: bold;
+        font-style: italic;
+        padding-right: 40px;
+        text-decoration: none;
+        text-shadow: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      .floor-plan {
+        margin-right: 40px;
+      }
+    }
+  }
+  .inline-content {
+    display: none;
+  }
+
+  .inline {
+    border: 4px solid #fff;
+    //padding: 20px;
+    background-color: #eee;
+    color: #333;
+    .stand-content {
+      position: relative;
+      height: 660px;
+      width: 940px;
+      .header {
+        width: 920px;
+        padding: 10px;
+        height: 30px;
+        background: asset-url("brand-stripe-your-expo.png", "image") repeat-x #eee bottom center;
+        .logo {
+          height: 30px;
+          left: 551px;
+          position: absolute;
+          top: 17px;
+          width: 129px;
+        }
+      }
+      .copy {
+        position: relative;
+        overflow: scroll;
+        height: 590px;
+        width: 940px;
+        .main-column {
+          position: relative;
+          float: left;
+          width: 70%;
+          padding-left: 10px;
+        }
+        .side-column {
+          position: relative;
+          float: left;
+          padding-left: 10px;
+          padding-top: 10px;
+          width: 27%;
+        }
+      }
+    }
+  }
+
+  .main-column {
+    float: left;
+    padding-left: 10px;
+    position: relative;
+    width: 650px;
+  }
+  .side-column {
+    float: left;
+    padding-left: 10px;
+    padding-top: 10px;
+    position: relative;
+    width: 280px;
+  }
+
+
+
+  //box styles
+  .breadcrumb {
+    padding-left: 10px;
+    padding-top: 10px;
+    //padding-bottom: 20px;
+  }
+  .widget {
+
+    background-color: $brand-orange;
+
+    margin-top: 20px;
+    margin-right: 10px;
+    padding: 5px 10px;
+
+    //-moz-border-radius: 0 16px 0 16px;
+    //-webkit-border-radius: 0 16px 0 16px;
+    //border-radius: 0 16px 0 16px; /* future proofing */
+    //-khtml-border-radius: 0 16px 0 16px; /* for old Konqueror browsers */
+    @include brand-radius(0, 16px, 0, 16px);
+
+    h3 {
+      color: #eee;
+      text-shadow: 1px 1px 1px #000;
+    }
+
+    .special {
+      color: $brand-blue-dark;
+    }
+    &.sponsors {
+      a {
+        display: block;
+        text-align: center;
+      }
+    }
+
+  }
+
+  .image-header {
+    background-color: $brand-orange;
+    width: 228px;
+    text-align: center;
+    padding: 2px 0px;
+    font-style: italic;
+    font-weight: bold;
+    color: #eee;
+    text-shadow: 1px 1px 1px #000;
+  }
+
+  .brand-divider {
+    background: asset-url("brand-stripe-your-expo.png", "image") repeat-x #eee;
+    height: 2px;
+    margin: 0px 0px 10px;
+  }
+
+  .stand-number {
+    border-bottom: 1px dotted #333;
+    border-left: 1px dotted #333;
+    border-right: 1px dotted #333;
+    position: absolute;
+    top: 0px;
+    left: 548px;
+    padding: 5px 20px;
+    background-color: $brand-green;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    //-moz-box-shadow:    0px 3px 3px 0px #666;
+    //-webkit-box-shadow: 0px 3px 3px 0px #666;
+    //box-shadow:         0px 3px 3px 0px #666;
+
+    @include box-emboss(0px, 3px, 3px, 0px, #666);
+
+    .number {
+      font-size: 2em;
+    }
+  }
+  section {
+    display: block;
+    article {
+      display: block;
+      border-bottom: 1px solid $brand-blue;
+      padding: 10px 0px 20px;
+      .image-container {
+        float: left;
+        width: 200px;
+        &.place-right {
+          float: right;
+        }
+        img {
+          width: 180px;
+          margin: 0 10px;
+        }
+      }
+      .copy-container {
+        float: left;
+        width: 447px;
+        h2 {
+          margin: 0px;
+        }
+        &.video {
+          float: left;
+          width: 360px;
+          padding-left: 10px;
+        }
+      }
+      .video-container {
+        float: left;
+        padding-top: 8px;
+        width: 280px;
+      }
+    }
+  }
+
+  .footer.vendor {
+    background-color: $brand-orange;
+    margin: 0px 10px;
+    padding: 10px 10px;
+    @include brand-radius(0, 16px, 0, 16px);
+    height: 20px;
+    .contact {
+      padding: 0px 10px;
+    }
+    a {
+      color: $brand-blue-dark;
+      text-shadow: none;
+    }
+  }
+
+  .slides_container {
+    width:228px;
+    height:228px;
+    div {
+      width:228px;
+      height:228px;
+      display:block;
+    }
+  }
+
+  .center {
+    margin: 0 auto;
+    width: 600px;
+  }
+
+  .vertical-section-selector {
+    margin-top: 100px;
+    nav {
+      width: 100%;
+      a {
+        display: block;
+      }
+    }
+  }
+  //text styles
+  h1 {
+    font-size: 3em;
+    font-weight: bold;
+    font-style: italic;
+    &.company-name {
+      margin: 24px 0 48px 140px;
+    }
+  }
+
+  h2 {
+    font-size: 1.6em;
+    font-weight: bold;
+    font-style: italic;
+  }
+
+  h3 {
+    font-size: 1.1em;
+    line-height: 0.2em;
+    font-weight: bold;
+    font-style: italic;
+  }
+
+  .company-description {
+    color: #333;
+    margin-bottom: 20px;
+    .lbl-about-us {
+      background-color: $brand-green;
+      color: #fff;
+      padding: 0px 10px;
+      margin-right: 10px;
+      font-weight: 200;
+      -moz-border-radius: 0 6px 0 6px;
+      -webkit-border-radius: 0 6px 0 6px;
+      border-radius: 0 6px 0 6px; /* future proofing */
+      -khtml-border-radius: 0 6px 0 6px; /* for old Konqueror browsers */
+    }
+    .quoted {
+      color: #888;
+    }
+  }
+
+  .special {
+    color: $brand-blue;
+    font-weight: bold;
+  }
+
+  //img styles
+  img.logo {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: 0px;
+  }
+
+  #welcome {
+    padding: 20px;
+  }
+
+  button {
+    margin-top: 10px;
+    background-color: $brand-orange;
+    border: #00aa00;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+//colorbox overrides
+#cboxClose {
+  display: none!important;
+}
+
+.colorbox-content {
+  width: 900px;
+  text-align: center;
+}
+
+.btn-close {
+  background-color: $wse-orange; // Old browsers
+  @include filter-gradient($wse-orange-light, $wse-orange, vertical); // IE6-9
+  @include background-image(linear-gradient(top,  $wse-orange-light 0%, $wse-orange 100%));
+  border-radius: 8px 8px 8px 8px;
+  color: #120B80;
+  display: block;
+  margin: 0 auto;
+  padding: 5px 30px;
+  text-align: center;
+}
+
+//CLEARFIX styles
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clearfix {
+  display: inline-block;
+}
+
+html[xmlns] .clearfix {
+  display: block;
+}
+
+* html .clearfix {
+  height: 1%;
+}

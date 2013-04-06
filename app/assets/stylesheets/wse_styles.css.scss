@@ -51,8 +51,6 @@ $brand-green-lighter: lighten( $brand-green,20%);
 $brand-green-dark: darken( $brand-green,10%);
 $brand-green-darker: darken( $brand-green,20%);
 
-$header-height: 96px;
-
 $base-font: 'Rambla', sans-serif;
 
 html {
@@ -75,20 +73,20 @@ body {
 		font: 1em $base-font;
 	}
 	.bg-spot {
-		background: asset-url("bg-spotlight.jpg", "image") no-repeat center top #acacac;
+    position: relative;
+		background: asset-url("visitors_hd.jpg", "image") no-repeat center top #acacac;
+    //background-color: #F0F0F0;
+    height: 808px;
 	}
 
 	.bg-brand-stripe {
-		background: asset-url("brand-stripe-your-expo.png", "image") repeat-x #fff;
+		background: asset-url("brand-stripe.gif", "image") repeat-x #fff;
 	}
 	.header {
-		position: fixed;
 		top: 0px;
 		center: 0px;
-		height: $header-height;
 		width: 100%;
 		z-index: 100;
-		@include box-emboss(1px, 1px, 5px, 1px, #888);
 	}
 
 	.footer {
@@ -112,21 +110,26 @@ body {
 		margin: 0 auto;
 		position: relative;
 		&.main {
-			margin-top: $header-height;
 			background-color: #eee;
 			padding-bottom: 10px;
 		}
+
+    .home-copy {
+      background-color: #eee;
+      position: absolute;
+      width: 400px;
+      padding: 20px;
+      right: 0px;
+      b {
+        font-weight: bold;
+        color: $wse-orange;
+      }
+    }
+
 	}
 
 	header {
-		height: 96px;
-		overflow: hidden;
-		position: relative;
 		a.logo {
-			display: block;
-			position: absolute;
-			top: 10px;
-			left: 0px;
 			img.logo-home {
 			}
 		}
@@ -150,6 +153,7 @@ body {
 				vertical-align: middle;
 			}
 		}
+
 		nav {
 			margin: 69px 0 0 280px;
 
