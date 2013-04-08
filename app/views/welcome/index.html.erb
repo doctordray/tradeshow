@@ -28,35 +28,67 @@
   </div>
 </div>
 
+<div class="inline-content">
+  <div class="inline" id="welcome">
+    <div class="colorbox-content">
+
+      <h2>Welcome to an interactive demo for Your Northern Beaches Expo</h2>
+
+      <p>This is a partially functional demonstration. Only some of the links work.</p>
+
+      <p>When this dialog box closes, click on the North Eastern section of the map.</p>
+    </div>
+    <button class="btn-close">Close the dialog and start the demo!</button>
+  </div>
+</div>
+
 <script>
-  
+  $.urlParam = function(name){
+      var results = new RegExp('[\\?&]' + name + '=([^&#]*)').exec(window.location.href);
+      if (!results)
+      {
+          return 0;
+      }
+      return results[1] || 0;
+  }
+
   $('#tradeshowmap').maphilight({fillColor: 'ed5100', strokeColor: '888800', shadowFrom: 'fill', shadowRadius: 16, shadowX: 10, shadowY: 10});
 
   $(document).ready( function() {
 
-  $('#link_NE').mouseover(function(e) {
-    $('#area_NE').mouseover();
-    }).mouseout(function(e) {
-    $('#area_NE').mouseout();
-  });
+    $('#link_NE').mouseover(function(e) {
+      $('#area_NE').mouseover();
+      }).mouseout(function(e) {
+      $('#area_NE').mouseout();
+    });
 
-  $('#link_NW').mouseover(function(e) {
-    $('#area_NW').mouseover();
-    }).mouseout(function(e) {
-    $('#area_NW').mouseout();
-  });
+    $('#link_NW').mouseover(function(e) {
+      $('#area_NW').mouseover();
+      }).mouseout(function(e) {
+      $('#area_NW').mouseout();
+    });
 
-  $('#link_SE').mouseover(function(e) {
-    $('#area_SE').mouseover();
-    }).mouseout(function(e) {
-    $('#area_SE').mouseout();
-  });
+    $('#link_SE').mouseover(function(e) {
+      $('#area_SE').mouseover();
+      }).mouseout(function(e) {
+      $('#area_SE').mouseout();
+    });
 
-  $('#link_SW').mouseover(function(e) {
-    $('#area_SW').mouseover();
-    }).mouseout(function(e) {
-    $('#area_SW').mouseout();
-  });
+    $('#link_SW').mouseover(function(e) {
+      $('#area_SW').mouseover();
+      }).mouseout(function(e) {
+      $('#area_SW').mouseout();
+    });
+
+    //show a welcome dialog
+    var showsplash = $.urlParam('splash');
+    if (showsplash != 'none')
+      $.colorbox({inline:true, href:"#welcome", height:292});
+
+    //wire up close buttons
+    $('.btn-close').click( function() {
+      $.colorbox.close();
+    });
 
   });
 

@@ -29,6 +29,17 @@
   </div>
 </div>
 
+<div class="inline-content">
+  <div class="inline" id="welcome">
+    <div class="colorbox-content">
+
+    [Put instructional text here]
+
+    </div>
+    <button class="btn-close">Proceed to Your Northern Beaches Expo Demo</button>
+  </div>
+</div>
+
 <script>
 
   $('#tradeshowmapNE').maphilight({fillColor: 'ed5100', strokeColor: '888800', shadowFrom: 'fill', shadowRadius: 16, shadowX: 10, shadowY: 10});
@@ -46,6 +57,11 @@
   });
 
   $(document).ready( function() {
+    $.colorbox({inline:true, href:"#welcome", height:292});
+    //wire up close buttons
+    $('.btn-close').click( function() {
+      $.colorbox.close();
+    });
 
   });
 </script>
