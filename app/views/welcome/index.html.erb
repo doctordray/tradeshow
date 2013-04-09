@@ -8,10 +8,10 @@
     <p>Please select a section of the map for a closer view</p>
     <%= image_tag 'tradeshow-map.png', :name => 'tradeshowmap', :id => 'tradeshowmap', :usemap => '#m_tradeshowmap', :width=>"496", :height=>"600" %>
     <map name="m_tradeshowmap" id="m_tradeshowmap">
-      <area shape="poly" coords="5,293,272,293,272,597,5,597,5,293" href="javascript:;" id="area_SW" title="South Western Section" alt="South Western Section" />
-      <area shape="rect" coords="5,7,206,292" href="javascript:;" id="area_NW" title="North Western Section" alt="North Western Section" />
-      <area shape="rect" coords="272,237,496,493" href="javascript:;" id="area_SE" title="South Eastern Section" alt="South Eastern Section" />
-      <area shape="rect" coords="270,4,496,232" href="<%= url_for(:ne_section) %>" id="area_NE" title="North Eastern Section" alt="North Eastern Section" />
+      <area shape="poly" coords="5,293,272,293,272,597,5,597,5,293" href="javascript:;" id="area_SW" title="Pets Expo/Camping & Outdoors Expo" alt="Pets Expo/Camping & Outdoors Expo" />
+      <area shape="rect" coords="5,7,206,292" href="javascript:;" id="area_NW" title="Camping & Outdoors Expo" alt="Camping & Outdoors Expo" />
+      <area shape="rect" coords="272,237,496,493" href="javascript:;" id="area_SE" title="Home Show/Retired Life Expo" alt="Home Show/Retired Life Expo" />
+      <area shape="rect" coords="270,4,496,232" href="<%= url_for(:ne_section) %>" id="area_NE" title="All Woman Show/Home & Lifestyle Show" alt="All Woman Show/Home & Lifestyle Show" />
     </map>
   </div>
   <div class="side-column">
@@ -19,10 +19,10 @@
     <div class="vertical-section-selector">
       <h3>Available Sections</h3>
       <nav>
-        <%= link_to "North Eastern Section", :ne_section, :id=>"link_NE" %>
-        <%= link_to "North Western Section", '#', :id=>"link_NW" %>
-        <%= link_to "South Eastern Section", '#', :id=>"link_SE" %>
-        <%= link_to "South Western Section", '#', :id=>"link_SW" %>
+        <%= link_to "All Woman Show/Home & Lifestyle Show", :ne_section, :id=>"link_NE" %>
+        <%= link_to "Camping & Outdoors Expo", '#', :id=>"link_NW" %>
+        <%= link_to "Home Show/Retired Life Expo", '#', :id=>"link_SE" %>
+        <%= link_to "Pets Expo/Camping & Outdoors Expo", '#', :id=>"link_SW" %>
       </nav>
     </div>
   </div>
