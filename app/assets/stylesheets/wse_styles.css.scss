@@ -27,7 +27,8 @@
 
 
 $wse-orange: #ed5100;
-$wse-orange-light: lighten( $wse-orange,20%);
+$wse-orange-light: lighten( $wse-orange,10%);
+$wse-orange-lighter: lighten( $wse-orange,20%);
 
 $wse-green: #62ac1e;
 $wse-blue: #120b80;
@@ -118,12 +119,12 @@ body {
 		}
 
     .home-header {
-      color: $wse-green;
+      color: $wse-orange-light;
       font: 3.5em/1.2em $base-font;
       left: 84px;
       position: absolute;
       text-align: right;
-      text-shadow: 1px 1px 0 $wse-blue;
+      text-shadow: 2px 2px 1px #222;
       top: 43px;
       width: 580px;
     }
