@@ -18,7 +18,7 @@
     </map>
   </div>
   <div class="side-column">
-    <%= render "shared/sponsors" %>
+    <%= render "shared/rotating_sponsors" %>
     <div class="vertical-section-selector">
       <h3>Vendors in this Section</h3>
       <nav>
@@ -49,6 +49,11 @@
   });
 
   $(document).ready( function() {
-
+    //wire up slideshow
+    $("#slides").slides({
+        preload: true,
+        generatePagination: false,
+        play: 3000
+    });
   });
 </script>

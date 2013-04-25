@@ -454,6 +454,15 @@ body {
   }
 }
 
+//sponsor widget
+.sponsors.widget {
+  .slides_container {
+    height: 144px;
+  }
+}
+.sponsor-logo {
+  padding-left: 64px;
+}
 //colorbox overrides
 #cboxClose {
   display: none!important;
