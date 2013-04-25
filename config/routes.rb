@@ -2,10 +2,12 @@ Tradeshow::Application.routes.draw do
   match "/" => "welcome#wse_home", :as => :home
   match "/?splash=none" => "welcome#index", :as => :home_no_splash
   match "/about_wse" => "welcome#about_wse", :as => :about_wse
-  match "ne_section" => "welcome#ne_section", :as => :ne_section
+  match "/northernbeachesexpo" => "welcome#northernbeachesexpo_index", :as => :northern_beaches_expo_home
+  match "/northernbeachesexpo/all-woman-home-and-lifestyle" => "welcome#ne_section", :as => :ne_section
   match "stand/on_the_fuze" => "welcome#on_the_fuze", :as => :on_the_fuze
   match "stand/worldstage_expo" => "welcome#worldstage_expo", :as => :worldstage_expo
-  get "welcome/index_one_page"
+  #out-of-date routes below
+  #get "welcome/index_one_page"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
