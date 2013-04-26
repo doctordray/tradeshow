@@ -104,6 +104,7 @@
     });
 
     //show a welcome dialog
+    $('.widget.sponsors').hide();
     var showsplash = $.urlParam('splash');
     if (showsplash != 'none')
       $.colorbox({inline:true, href:"#welcome", height:615});
@@ -111,6 +112,7 @@
     //wire up close buttons
     $('.btn-close').click( function() {
       $.colorbox.close();
+      $('.widget.sponsors').show();
     });
 
     //wire up slideshow
