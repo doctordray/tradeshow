@@ -485,6 +485,17 @@ body {
   text-align: center;
 }
 
+//closed page
+.expo-closed {
+  .closed
+  {
+    background: asset-url("bg-wse-closed.jpg", "image") no-repeat transparent;
+    height: 500px;
+    padding-top: 160px;
+    padding-left: 100px;
+  }
+}
+
 //CLEARFIX styles
 .clearfix:after {
   content: ".";

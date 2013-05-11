@@ -2,8 +2,10 @@ Tradeshow::Application.routes.draw do
   match "/" => "welcome#wse_home", :as => :home
   match "/?splash=none" => "welcome#index", :as => :home_no_splash
   match "/about_wse" => "welcome#about_wse", :as => :about_wse
-  match "/northernbeachesexpo" => "welcome#northernbeachesexpo_index", :as => :northern_beaches_expo_home
-  match "/northernbeachesexpo/?splash=none" => "welcome#northernbeachesexpo_index", :as => :northern_beaches_expo_home_no_splash
+  #match "/northernbeachesexpo" => "welcome#northernbeachesexpo_index", :as => :northern_beaches_expo_home
+  #match "/northernbeachesexpo/?splash=none" => "welcome#northernbeachesexpo_index", :as => :northern_beaches_expo_home_no_splash
+  match "/northernbeachesexpo_open" => "welcome#northernbeachesexpo_index", :as => :northern_beaches_expo_home
+  match "/northernbeachesexpo" => "welcome#northernbeachesexpo_closed", :as => :northern_beaches_expo_closed
   match "/northernbeachesexpo/all-woman-home-and-lifestyle" => "welcome#ne_section", :as => :ne_section
   match "stand/on_the_fuze" => "welcome#on_the_fuze", :as => :on_the_fuze
   match "stand/worldstage_expo" => "welcome#worldstage_expo", :as => :worldstage_expo
