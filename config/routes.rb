@@ -1,14 +1,19 @@
 Tradeshow::Application.routes.draw do
-  match "/" => "welcome#wse_home", :as => :home
-  match "/?splash=none" => "welcome#index", :as => :home_no_splash
-  match "/about_wse" => "welcome#about_wse", :as => :about_wse
+  resources :stalls
+
+  #resources :expos
+  #match "/expo/:slug" => "expos#show_by_slug", :as => :expo_show_by_slug
+
+  #match "/?splash=none" => "welcome#index", :as => :home_no_splash
+  #match "/about_wse" => "welcome#about_wse", :as => :about_wse
   #match "/northernbeachesexpo" => "welcome#northernbeachesexpo_index", :as => :northern_beaches_expo_home
   #match "/northernbeachesexpo/?splash=none" => "welcome#northernbeachesexpo_index", :as => :northern_beaches_expo_home_no_splash
-  match "/northernbeachesexpo" => "welcome#northernbeachesexpo_index", :as => :northern_beaches_expo_home
-  match "/northernbeachesexpo_closed" => "welcome#northernbeachesexpo_closed", :as => :northern_beaches_expo_closed
-  match "/northernbeachesexpo/all-woman-home-and-lifestyle" => "welcome#ne_section", :as => :ne_section
-  match "stand/on_the_fuze" => "welcome#on_the_fuze", :as => :on_the_fuze
-  match "stand/worldstage_expo" => "welcome#worldstage_expo", :as => :worldstage_expo
+  #match "/northernbeachesexpo" => "welcome#northernbeachesexpo_index", :as => :northern_beaches_expo_home
+  #match "/northernbeachesexpo_closed" => "welcome#northernbeachesexpo_closed", :as => :northern_beaches_expo_closed
+  #match "/northernbeachesexpo/all-woman-home-and-lifestyle" => "welcome#ne_section", :as => :ne_section
+  #match "stand/on_the_fuze" => "welcome#on_the_fuze", :as => :on_the_fuze
+  #match "stand/worldstage_expo" => "welcome#worldstage_expo", :as => :worldstage_expo
+
   #out-of-date routes below
   #get "welcome/index_one_page"
 
@@ -61,7 +66,7 @@ Tradeshow::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'welcome#wse_home'
+  root :to => 'home#index'
 
   # See how all your routes lay out with "rake routes"
 

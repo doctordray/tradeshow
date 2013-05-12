@@ -1,0 +1,37 @@
+<h1>All Stalls</h1>
+
+<table>
+  <tr>
+    <th>Description one</th>
+    <th>Description two</th>
+    <th>Slug</th>
+    <th>Name</th>
+    <th>Stall number</th>
+    <th>Phone</th>
+    <th>Address</th>
+    <th>Url</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @stalls.each do |stall| %>
+  <tr>
+    <td><%= stall.description_one.length > 10 ? "#{stall.description_one[0..10]}..." : stall.description_one %></td>
+    <td><%= stall.description_two.length > 10 ? "#{stall.description_two[0..10]}..." : stall.description_two %></td>
+    <td><%= stall.slug %></td>
+    <td><%= stall.name %></td>
+    <td><%= stall.stall_number %></td>
+    <td><%= stall.phone %></td>
+    <td><%= stall.address %></td>
+    <td><%= stall.url %></td>
+    <td><%= link_to 'Show', stall %></td>
+    <td><%= link_to 'Edit', edit_stall_path(stall) %></td>
+    <td><%= link_to 'Destroy', stall, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Stall', new_stall_path %>
