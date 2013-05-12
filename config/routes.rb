@@ -1,4 +1,6 @@
 Tradeshow::Application.routes.draw do
+  resources :stalls
+
   #resources :expos
   #match "/expo/:slug" => "expos#show_by_slug", :as => :expo_show_by_slug
 
