@@ -18,4 +18,8 @@ class WelcomeController < ApplicationController
     render :layout => "home_page_layout"
   end
 
+  def northernbeachesexpo_index
+     #render :action => "northernbeachesexpo_closed"
+  end
+
 end

@@ -493,6 +493,18 @@ body {
     height: 500px;
     padding-top: 160px;
     padding-left: 100px;
+    .inner {
+      background-color: #c0c0c0;
+      background-color: rgba(200, 200, 200, 0.8);
+      padding: 25px 48px 48px;
+      width: 640px;
+      border: 1px solid $brand-orange;
+      @include box-emboss(0px,2px,2px,2px,#888);
+      h2, h3 {
+        color: $brand-orange-darker;
+        text-align: center;
+      }
+    }
   }
 }
 
