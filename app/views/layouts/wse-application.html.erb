@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WorldStage Expo</title>
+  <%= stylesheet_link_tag    "application-wse", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <%= render "shared/ga" %>
+</head>
+<!-- home_page_layout //-->
+<body>
+  <%= render "shared/wse_header" %>
+  <div class="bg-spot">
+    <div class="container">
+    <%= yield %>
+    </div>
+  </div>
+  <div class="bg-brand-stripe footer">
+    <footer class="container">
+      <nav class="footer">
+        <span class="copyright">&copy;&nbsp;2013 WorldStage Expo</span>
+        <a href="">About WSE</a>
+        <a href="">Contact WSE</a>
+      </nav>
+      </footer>
+  </div>
+</body>
+</html>

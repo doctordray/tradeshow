@@ -3,5 +3,6 @@ class HomeController < ApplicationController
   end
 
   def index
+    render :layout => "wse-application"
   end
 end
