@@ -1,5 +1,6 @@
 class NorthernBeachesController < ApplicationController
   def index
+    render "open"
   end
 
   def ne_section
