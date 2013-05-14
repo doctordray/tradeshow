@@ -8,6 +8,7 @@ Tradeshow::Application.routes.draw do
   #match "/about_wse" => "welcome#about_wse", :as => :about_wse
 
   match '/northern-beaches-expo' => 'northern_beaches#index', :as => :northern_beaches
+  match "/northern-beaches-expo/?splash=none" => "northern_beaches#index", :as => :northern_beaches_no_splash
   match '/northern-beaches-expo/all-woman-home-and-lifestyle' => 'northern_beaches#ne_section', :as => :northern_beaches_ne_section
   match "/northern-beaches-expo/worldstage-expo" => 'northern_beaches#worldstage_expo', :as => :worldstage_expo
   match "/northern-beaches-expo/on-the-fuze" => 'northern_beaches#on_the_fuze', :as => :on_the_fuze

@@ -112,9 +112,12 @@
     //show a welcome dialog
     $('.widget.sponsors').hide();
     var showsplash = $.urlParam('splash');
-    if (showsplash != 'none')
+    if (showsplash == 'none')
     {
       //$.colorbox({inline:true, href:"#welcome", height:615});
+      //alert('yowza');
+      $('.splash-open').hide();
+      $('.widget.sponsors').show();
     }
 
     //wire up close buttons
