@@ -2,9 +2,6 @@
 
 <table>
   <tr>
-    <th>Description one</th>
-    <th>Description two</th>
-    <th>Slug</th>
     <th>Name</th>
     <th>Stall number</th>
     <th>Phone</th>
@@ -18,9 +15,6 @@
 
 <% @stalls.each do |stall| %>
   <tr>
-    <td><%= stall.description_one.length > 10 ? "#{stall.description_one[0..10]}..." : stall.description_one %></td>
-    <td><%= stall.description_two.length > 10 ? "#{stall.description_two[0..10]}..." : stall.description_two %></td>
-    <td><%= stall.slug %></td>
     <td><%= stall.name %></td>
     <td><%= stall.stall_number %></td>
     <td><%= stall.phone %></td>

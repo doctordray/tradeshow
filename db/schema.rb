@@ -16,7 +16,6 @@ ActiveRecord::Schema.define(:version => 20130511040643) do
   create_table "stalls", :force => true do |t|
     t.text     "description_one"
     t.text     "description_two"
-    t.string   "slug"
     t.string   "name"
     t.string   "stall_number"
     t.string   "url"

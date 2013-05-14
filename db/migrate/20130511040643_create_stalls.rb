@@ -3,7 +3,6 @@ class CreateStalls < ActiveRecord::Migration
     create_table :stalls do |t|
       t.text :description_one
       t.text :description_two
-      t.string :slug
       t.string :name
       t.string :stall_number
       t.string :url
