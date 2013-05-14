@@ -10,16 +10,18 @@
 <div class="copy">
   <div class="clearfix">
     <div class="main-column">
-      <%= image_tag "company/on-the-fuze/logo.png", :class=>"logo" %>
+      <%= image_tag "company/on-the-fuze/logo.png", :class => "logo" %>
       <h1 class="company-name"><%= @stall.name %></h1>
-      <p class="company-description">
-        <span class="lbl-about-us"><%= @stall.description_one %></span>
-      </p>
+
+
+
       <div class="brand-divider"></div>
       <section>
         <article class="clearfix">
-          <div class="copy-container video">
-            <h2>Who we are</h2>
+          <div class="copy-container">
+            <p class="company-description">
+              <span class="lbl-about-us">Who we are</span>
+            </p>
             <p>
               <%= @stall.description_one %>
             </P>
@@ -27,7 +29,9 @@
         </article>
         <article class="clearfix">
           <div class="copy-container">
-            <h2>What we do</h2>
+            <p class="company-description">
+              <span class="lbl-about-us">What we do</span>
+            </p>
             <p>
               <%= @stall.description_two %>
             </P>
@@ -42,16 +46,17 @@
       <div id="slides">
         <div class="slides_container">
           <div>
-            <%= image_tag "company/on-the-fuze/csr-01.jpg", :class=>"csr" %>
+            <%= image_tag "company/on-the-fuze/csr-01.jpg", :class => "csr" %>
           </div>
           <div>
-            <%= image_tag "company/on-the-fuze/csr-01.jpg", :class=>"csr" %>
+            <%= image_tag "company/on-the-fuze/csr-01.jpg", :class => "csr" %>
           </div>
           <div>
-            <%= image_tag "company/on-the-fuze/csr-01.jpg", :class=>"csr" %>
+            <%= image_tag "company/on-the-fuze/csr-01.jpg", :class => "csr" %>
           </div>
         </div>
       </div>
+
       <div class="widget">
         <h3>Today's Free Seminars</h3>
         <p>"How to KickStart Your Business" (30min) - Main Auditorium today at 2pm and 4pm</p>
@@ -63,20 +68,28 @@
         </p>
         <p>Ask one of our friendly staff at the stand about it!</p>
       </div>
+      <div class="widget">
+        <h3>Follow Us</h3>
+        <p class="special">
+          If have FB, Twitter,...put icon here for it
+        </p>
+      </div>
     </div>
   </div>
   <div class="footer vendor">
-    Contact <%= @stall.name %>: <span class="contact"><a href="tel://0-733-951-972"><%= @stall.phone %></a></span> | <span class="contact"><a href="mailto:<%= @stall.email %>"><%= @stall.email %></a></span> | <span class="contact"><%= @stall.address %></span>
+    Contact <%= @stall.name %>: <span class="contact"><a href="tel://0-733-951-972"><%= @stall.phone %></a></span> |
+    <span class="contact"><a href="mailto:<%= @stall.email %>"><%= @stall.email %></a></span> |
+    <span class="contact"><%= @stall.address %></span>
   </div>
 </div>
 
 <script type="text/javascript">
-  $(document).ready( function() {
+  $(document).ready(function () {
     //wire up slideshow
     $("#slides").slides({
-        preload: true,
-        generatePagination: false,
-        play: 3000
-      });
+      preload: true,
+      generatePagination: false,
+      play: 3000
+    });
   });
 </script>
