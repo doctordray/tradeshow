@@ -10,6 +10,7 @@ Tradeshow::Application.routes.draw do
   match '/northern-beaches-expo' => 'northern_beaches#index', :as => :northern_beaches
   match '/northern-beaches-expo/all-woman-home-and-lifestyle' => 'northern_beaches#ne_section', :as => :northern_beaches_ne_section
   match "/northern-beaches-expo/worldstage-expo" => 'northern_beaches#worldstage_expo', :as => :worldstage_expo
+  match "/northern-beaches-expo/on-the-fuze" => 'northern_beaches#on_the_fuze', :as => :on_the_fuze
   match "/northern-beaches-expo/open" => 'northern_beaches#open', :as => :northern_beaches_open
   match "/northern-beaches-expo/closed" => 'northern_beaches#closed', :as => :northern_beaches_closed
 
