@@ -10,6 +10,7 @@
     <th>Phone</th>
     <th>Address</th>
     <th>Url</th>
+    <th>Email</th>
     <th></th>
     <th></th>
     <th></th>
@@ -24,7 +25,8 @@
     <td><%= stall.stall_number %></td>
     <td><%= stall.phone %></td>
     <td><%= stall.address %></td>
-    <td><%= stall.url %></td>
+    <td><%= stall.url.length > 10 ? "#{stall.url[0..10]}..." : stall.url %></td>
+    <td><%= stall.email %></td>
     <td><%= link_to 'Show', stall %></td>
     <td><%= link_to 'Edit', edit_stall_path(stall) %></td>
     <td><%= link_to 'Destroy', stall, method: :delete, data: { confirm: 'Are you sure?' } %></td>

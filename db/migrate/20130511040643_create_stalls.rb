@@ -10,6 +10,10 @@ class CreateStalls < ActiveRecord::Migration
       t.string :phone
       t.string :address
       t.string :email
+      t.string :facebook
+      t.string :twitter
+      t.string :google_plus
+      t.string :pinterest
 
       t.timestamps
     end

@@ -23,6 +23,10 @@ ActiveRecord::Schema.define(:version => 20130511040643) do
     t.string   "phone"
     t.string   "address"
     t.string   "email"
+    t.string   "facebook"
+    t.string   "twitter"
+    t.string   "google_plus"
+    t.string   "pinterest"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
   end
