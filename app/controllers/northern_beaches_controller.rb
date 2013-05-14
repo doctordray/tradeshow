@@ -7,4 +7,13 @@ class NorthernBeachesController < ApplicationController
 
   def on_the_fuze
   end
+
+  def worldstage_expo
+  end
+
+  def open
+  end
+
+  def closed
+  end
 end

@@ -6,13 +6,18 @@ Tradeshow::Application.routes.draw do
 
   #match "/?splash=none" => "welcome#index", :as => :home_no_splash
   #match "/about_wse" => "welcome#about_wse", :as => :about_wse
-  #match "/northernbeachesexpo" => "welcome#northernbeachesexpo_index", :as => :northern_beaches_expo_home
+
+  match '/northern-beaches-expo' => 'northern_beaches#index', :as => :northern_beaches
+  match '/northern-beaches-expo/all-woman-home-and-lifestyle' => 'northern_beaches#ne_section', :as => :northern_beaches_ne_section
+  match "/northern-beaches-expo/worldstage-expo" => 'northern_beaches#worldstage_expo', :as => :worldstage_expo
+  match "/northern-beaches-expo/open" => 'northern_beaches#open', :as => :northern_beaches_open
+  match "/northern-beaches-expo/closed" => 'northern_beaches#closed', :as => :northern_beaches_closed
+
   #match "/northernbeachesexpo/?splash=none" => "welcome#northernbeachesexpo_index", :as => :northern_beaches_expo_home_no_splash
   #match "/northernbeachesexpo" => "welcome#northernbeachesexpo_index", :as => :northern_beaches_expo_home
   #match "/northernbeachesexpo_closed" => "welcome#northernbeachesexpo_closed", :as => :northern_beaches_expo_closed
   #match "/northernbeachesexpo/all-woman-home-and-lifestyle" => "welcome#ne_section", :as => :ne_section
   #match "stand/on_the_fuze" => "welcome#on_the_fuze", :as => :on_the_fuze
-  #match "stand/worldstage_expo" => "welcome#worldstage_expo", :as => :worldstage_expo
 
   #out-of-date routes below
   #get "welcome/index_one_page"
