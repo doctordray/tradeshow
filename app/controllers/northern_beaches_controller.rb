@@ -17,4 +17,10 @@ class NorthernBeachesController < ApplicationController
 
   def closed
   end
+
+  def stall
+    stall_number = params[:stall_number]
+
+    @stall = Stall.find_by_stall_number(stall_number)
+  end
 end

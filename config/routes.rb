@@ -13,6 +13,7 @@ Tradeshow::Application.routes.draw do
   match "/northern-beaches-expo/on-the-fuze" => 'northern_beaches#on_the_fuze', :as => :on_the_fuze
   match "/northern-beaches-expo/open" => 'northern_beaches#open', :as => :northern_beaches_open
   match "/northern-beaches-expo/closed" => 'northern_beaches#closed', :as => :northern_beaches_closed
+  match "/northern-beaches-expo/stalls/:stall_number" => 'northern_beaches#stall', :as => :northern_beaches_stall
 
   #match "/northernbeachesexpo/?splash=none" => "welcome#northernbeachesexpo_index", :as => :northern_beaches_expo_home_no_splash
   #match "/northernbeachesexpo" => "welcome#northernbeachesexpo_index", :as => :northern_beaches_expo_home

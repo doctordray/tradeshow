@@ -9,6 +9,7 @@ class CreateStalls < ActiveRecord::Migration
       t.string :url
       t.string :phone
       t.string :address
+      t.string :email
 
       t.timestamps
     end
