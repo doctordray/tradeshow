@@ -62,6 +62,19 @@ Tradeshow::Application.configure do
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
 
+     # paperclip will save to public/system/[object] when running local
+  config.paperclip_storage_options = {
+            :storage => :s3,
+            :bucket => 'wse-prod',
+            :s3_host_name => 's3-ap-southeast-2.amazonaws.com',
+            :s3_credentials => {
+              :access_key_id => 'AKIAIVYFHZ4KW5PSNESA',
+              :secret_access_key => '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'
+            },
+            :url => ":s3_url",
+            :path => "/racers/:id/:style/:basename.:extension"
+    }
+
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5

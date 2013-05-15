@@ -20,6 +20,13 @@
     <%= f.text_field :stall_number %>
   </div>
   <div class="field">
+    <%= f.label :logo %>
+    <% unless @stall.logo_file_name.nil?  %>
+      <%= image_tag( @stall.logo.url(:small)) %>
+    <% end %>
+    <%= f.file_field :logo%>
+  </div>
+  <div class="field">
     <%= f.label :url %><br />
     <%= f.text_field :url %>
   </div>

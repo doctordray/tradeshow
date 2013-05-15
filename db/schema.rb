@@ -26,8 +26,11 @@ ActiveRecord::Schema.define(:version => 20130511040643) do
     t.string   "twitter"
     t.string   "google_plus"
     t.string   "pinterest"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
+    t.string   "logo_file_name"
+    t.string   "logo_content_type"
+    t.integer  "logo_file_size"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
   end
 
 end

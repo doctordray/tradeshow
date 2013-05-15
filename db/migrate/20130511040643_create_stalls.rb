@@ -13,6 +13,9 @@ class CreateStalls < ActiveRecord::Migration
       t.string :twitter
       t.string :google_plus
       t.string :pinterest
+      t.string :logo_file_name # Original filename
+      t.string :logo_content_type # Mime type
+      t.integer :logo_file_size # File size in bytes
 
       t.timestamps
     end

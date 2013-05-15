@@ -1,16 +1,6 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Description one:</b>
-  <%= @stall.description_one %>
-</p>
-
-<p>
-  <b>Description two:</b>
-  <%= @stall.description_two %>
-</p>
-
-<p>
   <b>Name:</b>
   <%= @stall.name %>
 </p>
@@ -18,6 +8,13 @@
 <p>
   <b>Stall number:</b>
   <%= @stall.stall_number %>
+</p>
+
+<p>
+  <b>Logo:</b>
+<% unless @stall.logo_file_name.nil? %>
+  <%= image_tag(@stall.logo.url(:original)) %>
+<% end %>
 </p>
 
 <p>
@@ -48,6 +45,17 @@
   <b>Google+:</b>
   <%= @stall.google_plus %>
 </p>
+
+<p>
+  <b>Description one:</b>
+  <%= @stall.description_one %>
+</p>
+
+<p>
+  <b>Description two:</b>
+  <%= @stall.description_two %>
+</p>
+
 
 <%= link_to 'Edit', edit_stall_path(@stall) %> |
 <%= link_to 'Back', stalls_path %>
