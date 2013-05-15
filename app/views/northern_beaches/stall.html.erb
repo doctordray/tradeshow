@@ -10,12 +10,13 @@
 <div class="copy">
   <div class="clearfix">
     <div class="main-column">
-      <%= image_tag "company/on-the-fuze/logo.png", :class => "logo" %>
-      <h1 class="company-name"><%= @stall.name %></h1>
-
-
-
+      <div style="height: 128px">
+      <% unless @stall.logo_file_name.nil? %>
+        <%= image_tag(@stall.logo.url(:original), :class => "logo") %>
+      <% end %>
+      </div>
       <div class="brand-divider"></div>
+      <h1><%= @stall.name %></h1>
       <section>
         <article class="clearfix">
           <div class="copy-container">

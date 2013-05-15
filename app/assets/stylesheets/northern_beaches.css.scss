@@ -314,7 +314,7 @@ body {
     article {
       display: block;
       border-bottom: 1px solid $brand-blue;
-      padding: 10px 0px 20px;
+      padding: 0px 0px 20px;
       .image-container {
         float: left;
         width: 200px;
@@ -387,7 +387,7 @@ body {
   }
   //text styles
   h1 {
-    font-size: 3em;
+    font-size: 2em;
     font-weight: bold;
     font-style: italic;
     &.company-name {
@@ -434,7 +434,7 @@ body {
 
   //img styles
   img.logo {
-    width: 120px;
+    width: 528px;
     height: 120px;
     position: absolute;
     top: 0px;
