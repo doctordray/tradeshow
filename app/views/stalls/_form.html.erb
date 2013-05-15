@@ -26,6 +26,13 @@
     <% end %>
     <%= f.file_field :logo%>
   </div>
+
+  <div class="field">
+    <%= f.label :stall_images %>
+    <%= f.file_field('stall_stall_images_image', multiple: true, name: "stall[stall_images_attributes][][image]") %>
+  </div>
+
+
   <div class="field">
     <%= f.label :url %><br />
     <%= f.text_field :url %>

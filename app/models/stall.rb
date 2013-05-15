@@ -9,6 +9,11 @@ class Stall < ActiveRecord::Base
   validates :stall_number, presence: true
   validates :stall_number, uniqueness: true
 
+  has_many :stall_images, :as => :attachable
+
+  accepts_nested_attributes_for :stall_images, :allow_destroy => true
+  attr_accessible :stall_images_attributes
+
   attr_accessible :logo
   has_attached_file :logo,
                       { :styles =>

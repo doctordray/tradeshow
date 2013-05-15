@@ -18,6 +18,15 @@
 </p>
 
 <p>
+  <b>Images:</b>
+<% unless @stall.stall_images.nil? %>
+  <% @stall.stall_images.each{ |stall_image| %>
+    <%= image_tag(stall_image.image.url(:original)) %>
+  <% } %>
+<% end %>
+</p>
+
+<p>
   <b>Address:</b>
   <%= @stall.address %>
 </p>
