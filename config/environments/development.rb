@@ -35,16 +35,22 @@ Tradeshow::Application.configure do
   # Expands the lines which load the assets
   config.assets.debug = true
 
-    # paperclip will save to public/system/[object] when running local
+  # paperclip will save to public/system/[object] when running local
   config.paperclip_storage_options = {
-          :storage => :s3,
-          :s3_host_name => 's3-ap-southeast-2.amazonaws.com',
-          :bucket => 'wse-dev',
-          :s3_credentials => {
-            :access_key_id => 'AKIAIVYFHZ4KW5PSNESA',
-            :secret_access_key => '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'
-          },
-          #:url => ":s3_url", #only need if going to overwrite with CDN
-          :path => "/:class/:attachment/:id/:style/:basename.:extension"
+     :url  => "/assets/:class/:attachment/:id/:style/:basename.:extension",
+     :path => ":rails_root/public/assets/:class/:attachment/:id/:style/:basename.:extension"
   }
+
+  # paperclip will upload to aws dev
+  #config.paperclip_storage_options = {
+  #        :storage => :s3,
+  #        :s3_host_name => 's3-ap-southeast-2.amazonaws.com',
+  #        :bucket => 'wse-dev',
+  #        :s3_credentials => {
+  #          :access_key_id => 'AKIAIVYFHZ4KW5PSNESA',
+  #          :secret_access_key => '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'
+  #        },
+  #        #:url => ":s3_url", #only need if going to overwrite with CDN
+  #        :path => "/:class/:attachment/:id/:style/:basename.:extension"
+  #}
 end
