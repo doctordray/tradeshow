@@ -385,6 +385,11 @@ body {
       }
     }
   }
+
+  .social-media {
+    margin-top: 20px;
+    padding: 5px 10px;
+  }
   //text styles
   h1 {
     font-size: 2em;
@@ -506,6 +511,34 @@ body {
       }
     }
   }
+}
+
+//open page
+.splash-open {
+  position: absolute;
+  top: 0px;
+  height: 780px;
+  background-color: #fff;
+  width: 100%;
+  transition: top 1s ease-in-out 10ms;
+  -webkit-transition: top 1s ease-in-out 10ms;
+  z-index: 10;
+  .splash-open-inner {
+    margin: 80px auto 0px;
+    text-align: center;
+    width: 600px;
+    button {
+      color: #fff;
+      padding: 20px;
+      @include set-all-radius(10px);
+      text-shadow: 1px 1px 1px #000;
+      width: 160px;
+    }
+  }
+}
+
+.splash-open.hide-away {
+  top: -880px;
 }
 
 //CLEARFIX styles

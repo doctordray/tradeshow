@@ -66,8 +66,19 @@
 </div>
 
 <div class="splash-open">
-  <h1>The Expo is OPEN!!!</h1>
-  <button id="let-me-in">Let me In</button>
+  <div class="splash-open-inner">
+    <h1>Welcome to</h1>
+    <div>
+      <%= image_tag 'your-expo-logo.png' %>
+    </div>
+    <p>
+    The online experience for Your Northern Beaches Expo is open <br />from the 25th May to the 26th May.
+    </p>
+    <p>
+       It's the next best thing to actually being at the Expo.
+    </p>
+    <button id="let-me-in">enter</button>
+  </div>
 </div>
 
 
@@ -141,21 +152,3 @@
   });
 
 </script>
-<style type="text/css">
-
-  .splash-open {
-    position: absolute;
-    top: 0px;
-    height: 780px;
-    background-color: #fff;
-    width: 100%;
-    transition: top 1s ease-in-out 500ms;
-    -webkit-transition: top 1s ease-in-out 500ms;
-    z-index: 10;
-  }
-
-  .splash-open.hide-away {
-    top: -880px;
-  }
-
-</style>
