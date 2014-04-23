@@ -47,8 +47,8 @@ Tradeshow::Application.configure do
   #        :s3_host_name => 's3-ap-southeast-2.amazonaws.com',
   #        :bucket => 'wse-dev',
   #        :s3_credentials => {
-  #          :access_key_id => 'AKIAIVYFHZ4KW5PSNESA',
-  #          :secret_access_key => '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'
+  #          :access_key_id => '',
+  #          :secret_access_key => ''
   #        },
   #        #:url => ":s3_url", #only need if going to overwrite with CDN
   #        :path => "/:class/:attachment/:id/:style/:basename.:extension"
